@@ -35,6 +35,7 @@ function Mobile () {
         const errors = {}
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
         const regexn = /^(\+91[-\s]?)?[0]?(91)?[789]\d{9}$/;
+        const regexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{4,12}$/;
 
         if(!values.username){
             errors.username = "Username is required";
@@ -51,11 +52,14 @@ function Mobile () {
         }
         if(!values.password){
             errors.password = "Password is required";
-        }else if(values.password.length < 4){
-            errors.password = "Password must me more than 4 characters";
-        }else if (values.password.length > 6){
-            errors.password = "Password cannot be more than 6 characters";
+        }else if(!regexp.test(values.password)){
+            errors.password = "passsword must contain atleast one uppercase,lowercase,number,special character";
         }
+        // else if(values.password.length < 4){
+        //     errors.password = "Password must me more than 4 characters";
+        // }else if (values.password.length > 6){
+        //     errors.password = "Password cannot be more than 6 characters";
+        // }
         return errors;
     };
     
@@ -107,7 +111,7 @@ function Mobile () {
                                 onChange={handleChange}
                         />
                     </div>
-                    <p style={{color:"red"}} >{formErrors.mobilenumber}</p>
+                    <p style={{color:"red"}} >{formErrors.number}</p>
                     <div>
                         <label>Email</label>
                         <input type="email" name="email" placeholder='Email'

@@ -59,17 +59,38 @@
 
 // export default Login;
 
-import React from 'react'
+import React, { useState } from 'react'
 import Password from '../Toggle/forLogin/Password'
 import Mobile from '../Toggle/forLogin/Mobile'
 
 export default function Login() {
 
+    const [show,setShow] = useState(true);
+
     return (
         <div>
             <br/>
-            <Mobile/>
-            <Password/>
+            {/* <Mobile/>
+            <Password/> */}
+            <div>
+                <div style={{textAlign:"center"}}>
+
+                    {
+                        show 
+                        ?
+                        <div>
+                            <Mobile/>
+                            <button onClick={()=>{setShow(false)}} >Enter Your Password</button>
+                        </div> 
+                        : 
+                        <div>
+                            <Password/>
+                            <button onClick={()=>setShow(true)}>Logout</button>
+                        </div>
+                    }
+                    
+                </div>
+            </div>
         </div>
     )
 }

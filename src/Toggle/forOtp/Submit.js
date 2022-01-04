@@ -11,9 +11,9 @@ export default function Submit() {
 
     return (
         <div>
-            <input style={{background:"skyblue", width:"200px", paddingLeft:'none'}}
+            <input style={{background:"skyblue", width:"200px",height:"30px", marginLeft:"45%"}}
                         type="button"
-                        value="Login" 
+                        value="Submit" 
                         onClick={handleOtp}/><br/>
         </div>
     )

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import MailIcon from '@mui/icons-material/Mail';
 
 function Email () {
@@ -13,7 +13,7 @@ function Email () {
     let navigate = useNavigate();
 
     const handleOtp = () => {        
-            navigate('/password');
+            navigate('/newpassword');
     }
 
 
@@ -34,14 +34,18 @@ function Email () {
                         type="button"
                         value={loading ? "Loading..." : "Generate OTP" } 
                         disabled={loading} onClick={handleOtp}/><br/> */}
-                <input style={{background:"skyblue", width:"200px", marginLeft:'25px'}}
+                <input style={{background:"skyblue", width:"210px", marginLeft:'25px'}}
                         type="button"
                         value="Generate OTP" 
                         onClick={handleOtp}/><br/>
-                        <div style={{paddingLeft:"110px"}}>
-                            <p>Forgot Password</p>
-                            <p style={{paddingLeft:"85px"}}>Help</p>
-                        </div><br/>
+                        <div className='password'>
+                            <NavLink to="/reset">Forgot Password ?</NavLink>    
+                            </div>
+                            <div className='help'>
+                            <NavLink to="/help">Help</NavLink>    
+                            </div>
+
+                            <br/>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import '../../App.css'
+import Submit from "./Submit";
 
 class Otpinput extends React.Component {
 
@@ -90,13 +90,15 @@ class Otpinput extends React.Component {
             tabIndex="4" maxLength="1" onKeyUp={e => this.inputfocus(e)}
           />
         </div>
-        <Button className="primary" type="submit" 
+        {/* <button className="primary" type="submit" 
                         style={{width:"200px", height:"40px",
                                 marginLeft:"565px",color:"black",
                                 backgroundColor:"skyblue",
-                                fontWeight:"bold"}} > 
+                                fontWeight:"bold"}}
+                                 > 
           Submit
-        </Button>
+        </button> */}
+        <Submit/>
       </form>
     );
   }

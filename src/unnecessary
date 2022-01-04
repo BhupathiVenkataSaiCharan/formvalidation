@@ -1,2 +1,55 @@
 // password page is extra
 //new pasword page is extra....  after changing password redirect to first page
+
+//
+<form onSubmit={handleSubmit}>
+{/* <h1>Login form</h1> */}
+<div >
+{/* <div style={{textAlign:"center",padding:"10px"}} >
+    <label style={{position:"relative",top:"5px"}}>Username</label>
+    <input type="text" name="username" placeholder='username'
+            value={formValues.username}
+            onChange={handleChange}
+    />
+</div>
+<p style={{color:"red"}} >{formErrors.username}</p> */}
+{/*from this */}
+<div>
+    <label style={{position:"relative", top:"8px",right:"5px"}}><PhoneIcon/></label>
+
+    <input className='input_field' type="number" name="number" placeholder=''
+            autoComplete='off'
+            value={formValues.number}
+            onChange={handleChange}
+            style={{width:"180px",height:"35px"}}
+    />
+    <label className='input_label'>Mobile Number</label>
+
+    <p style={{color:"red"}} >{formErrors.number}</p>
+</div>
+
+{/* <div>
+    <label>Email</label>
+    <input type="email" name="email" placeholder='Email'
+            value={formValues.email}
+            onChange={handleChange}
+    />
+</div>
+<p style={{color:"red"}} >{formErrors.email}</p> */}
+{/* <div>
+    <label>Password</label>
+    <input type="password" name='password' placeholder='Password'
+            value={formValues.password}
+            onChange={handleChange}
+     />
+</div>
+<p style={{color:"red"}}>{formErrors.password}</p> */}
+    <button className='btn-primary'
+                style={{width:"210px",height:"30px",fontSize:"15px",
+                        marginLeft:"10px",
+                        backgroundColor:"skyblue"
+                        }}>
+                        Submit</button>
+</div>
+</form>
+

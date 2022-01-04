@@ -25,7 +25,7 @@ export default class Otp extends Component {
                     isInputNum={true}
                     containerStyle={{}}
                     />
-                <Submit/>           
+                {/* <Submit/>            */}
             </div>
         )
     }

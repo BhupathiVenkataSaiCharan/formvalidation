@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
-import Login from '../Pages/Login';
-import Reset from '../Pages/Reset';
-import Help from '../Pages/Help';
-import AfterLogin from '../Pages/AfterLogin';
-import ChangePassword from "../Pages/ChangePassword"
+import Login from '../Toggle/forLogin/Login';
+import Reset from '../Toggle/forOtp/Reset';
+import Help from '../Toggle/Pages/Help';
+import AfterLogin from '../Toggle/Pages/AfterLogin';
+import ChangePassword from "../Toggle/toChangePassword/ChangePassword"
 
 
 function Routing() {

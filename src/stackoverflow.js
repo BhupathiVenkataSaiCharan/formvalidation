@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LockIcon from '@mui/icons-material/Lock';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import "../../index.css";
 
 
 function Mobile () {
-    
-    // const initialvalues = { username:"", email:"", password:"", number:"" };
-    
+        
     const initialvalues = {number:"", password:""}
     const [formValues, setFormValues] = useState(initialvalues);
     const [formErrors, setFormErrors] = useState({});
@@ -78,12 +76,6 @@ function Mobile () {
         
         const regexn = /^(\+91[-\s]?)?[0]?(91)?[789]\d{9}$/;
 
-        // const regexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{4,12}$/;
-
-        // const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-        
-        /*number validation */
-
         if(!values.number){
             errors.number = "Mobile Number is required";
         }else if(!regexn.test(values.number)){
@@ -92,35 +84,9 @@ function Mobile () {
             errors.number = "number must be only 10 digits"
         }
 
-        /*password validation*/
-        
-        // if(!values.password){
-        //     errors.password = "Password is required";
-        // }else if(!regexp.test(values.password)){
-        //     errors.password = "passsword must contain atleast one uppercase,lowercase,number,special character";
-        // }
-        // else if(values.password.length < 4){
-        //     errors.password = "Password must me more than 4 characters";
-        // }else if (values.password.length > 6){
-        //     errors.password = "Password cannot be more than 6 characters";
-        // }
+       
 
         return errors;
-        // if(!values.email){
-        //     errors.email = "Email is required";
-        // }else if(!regex.test(values.email)){
-        //     errors.email = "This is not Valid email format";
-        // }
-        // if(!values.password){
-        //     errors.password = "Password is required";
-        // }else if(!regexp.test(values.password)){
-        //     errors.password = "passsword must contain atleast one uppercase,lowercase,number,special character";
-        // }
-        // else if(values.password.length < 4){
-        //     errors.password = "Password must me more than 4 characters";
-        // }else if (values.password.length > 6){
-        //     errors.password = "Password cannot be more than 6 characters";
-        // }
     };
     
         return (
@@ -132,27 +98,8 @@ function Mobile () {
                         style={{borderRadius:"50%"}} /><br/><br/>
                 
                 <div style={{justifyContent:'space-between'}}>
-                {/* <div>
-                    <div style={{display:'inline-block'}}>
-                        <PhoneIcon/>
-                            <input type="number" value={user_mobile} placeholder='Mobile number' required
-                                    style={{position:'relative',width:'200px',height:'30px',marginTop:'-20px'}}
-                                    onChange={e => setUser_mobile(e.target.value)} />
-                    </div>
-                </div>
-                <br/> */}
                 
-                {/* validation */}
-                {/* {Object.keys(formErrors).length ===0 && isSubmit ? 
-                    (<div>
-                        Signed in succesfully
-                    </div>
-                    ):(
-                        <div style={{padding:"20px"}} >
-                        <pre>{JSON.stringify(formValues)}</pre>
-                        </div>
-                    )}
-         */}<br/><br/><br/><br/>
+                <br/><br/><br/><br/>
                 {  !isSubmit 
                     
                     ? 
@@ -205,20 +152,7 @@ function Mobile () {
                         </div>
                     </form>
                 }
-                
-                {/* validation */}
-
                 </div>
-
-
-                            <div className='password'>
-                            <NavLink to="/reset">Forgot Password ?</NavLink>    
-                            </div>
-                            <div className='help'>
-                            <NavLink to="/help">Help</NavLink>    
-                            </div>
-
-                        <br/>
             </div>
         )
     }

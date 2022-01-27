@@ -6,7 +6,7 @@ export default function Submit() {
     let navigate = useNavigate();
 
     const handleOtp = () => {        
-            navigate('/newpassword');
+            navigate('/changepassword');
     }
 
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import ComparePassword from '../Toggle/toChangePassword/ComparePassword';
+import ComparePassword from './ComparePassword';
 
 function ChangePassword() {
   return <div>

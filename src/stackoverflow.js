@@ -1,3 +1,6 @@
+// for validation changes from regex to custom details
+
+
 import React, { useState, useEffect } from 'react';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LockIcon from '@mui/icons-material/Lock';

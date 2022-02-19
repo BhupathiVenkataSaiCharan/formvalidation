@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -47,7 +48,8 @@ code {
 }
 
 .content {
-  padding: 20px;
+  padding: none;
+  margin: auto;
 }
 
 .error{
@@ -132,6 +134,26 @@ code {
   /* font-weight: 700; */
 
 
+  /* answer from github for floating label */
+/* after adding placeholder in input 
+  .input_field::placeholder {
+    color: #fff;
+  }
+  
+  .input_field:-ms-input-placeholder { 
+   color: #fff;
+  }
+  
+  .input_field::-ms-input-placeholder { 
+   color: #fff;
+  }
+  .input_field:not(:placeholder-shown) ~ label {
+        top: -25px;
+        transition: 0.3s;
+        color: black;
+  } */
+
+
 /*for number*/
 .input_field{
   width: 100%;
@@ -161,6 +183,25 @@ code {
   color: crimson;
 }
 
+.input_field::placeholder {
+  color: #fff;
+}
+
+.input_field:-ms-input-placeholder { 
+ color: #fff;
+}
+
+.input_field::-ms-input-placeholder { 
+ color: #fff;
+}
+.input_field:not(:placeholder-shown) ~ label {
+      top: -25px;
+      transition: 0.3s;
+      color: black;
+}
+
+/* password field*/
+
 .input_fieldp{
   width: 100%;
   height: 40px;
@@ -170,6 +211,7 @@ code {
   outline: none;
   font-size: 16px;
 }
+
 .input_labelp{
   position: relative;
   left: -180px;
@@ -180,12 +222,30 @@ code {
 .input_fieldp:focus{
   border-color: crimson;
 }
-
 .input_fieldp:focus ~ .input_labelp{
   top: -25px;
   transition: 0.3s;
   color: crimson;
 }
+
+.input_fieldp::placeholder {
+  color: #fff;
+}
+
+.input_fieldp:-ms-input-placeholder{ 
+ color: #fff;
+}
+
+.input_fieldp::-ms-input-placeholder{ 
+ color: #fff;
+}
+.input_fieldp:not(:placeholder-shown) ~ label {
+      top: -25px;
+      transition: 0.3s;
+      color: black;
+}
+
+/* email field*/
 
 .input_fieldm{
   width: 100%;
@@ -213,6 +273,26 @@ code {
   color: crimson;
 }
 
+.input_fieldm::placeholder {
+  color: #fff;
+}
+
+.input_fieldm:-ms-input-placeholder{ 
+ color: #fff;
+}
+
+.input_fieldm::-ms-input-placeholder{ 
+ color: #fff;
+}
+.input_fieldm:not(:placeholder-shown) ~ label {
+      top: -25px;
+      transition: 0.3s;
+      color: black;
+}
+
+
+/* enter new password 1*/
+
  .input_fieldp1{
   width: 100%;
   height: 40px;
@@ -238,6 +318,24 @@ code {
   transition: 0.3s;
   color: crimson;
 }
+.input_fieldp1::placeholder {
+  color: #fff;
+}
+
+.input_fieldp1:-ms-input-placeholder{ 
+ color: #fff;
+}
+
+.input_fieldp1::-ms-input-placeholder{ 
+ color: #fff;
+}
+.input_fieldp1:not(:placeholder-shown) ~ label {
+      top: -25px;
+      transition: 0.3s;
+      color: black;
+}
+
+/* re-enter new password*/
 .input_fieldp2{
   width: 100%;
   height: 40px;
@@ -264,119 +362,21 @@ code {
   color: crimson;
 }
 
-
-/*.input_label1{
-  position: absolute;
-  left: 605px;
-  top: 276px;
-  pointer-events: none;
-  font-size: 16px;
+.input_fieldp2::placeholder {
+  color: #fff;
 }
 
-.input_field:focus ~ .input_label1{
-  top: 255px;
-  transition: 0.3s;
-  color: crimson;
+.input_fieldp2:-ms-input-placeholder{ 
+ color: #fff;
 }
 
-.Fields.input_label2{
-  position: absolute;
-  left: 65px;
-  top: 200px;
-  pointer-events: none;
-  font-size: 16px;
+.input_fieldp2::-ms-input-placeholder{ 
+ color: #fff;
 }
-
-.input_field:focus ~ .input_label2{
-  top: 330px;
-  transition: 0.3s;
-  color: crimson;
+.input_fieldp2:not(:placeholder-shown) ~ label {
+      top: -25px;
+      transition: 0.3s;
+      color: black;
 }
 
 
-.input_label3{
-  position: absolute;
-  left: 605px;
-  top: 296px;
-  pointer-events: none;
-  font-size: 16px;
-}
-
-.input_field3{
-  width: 100%;
-  height: 40px;
-  border: none;
-  border-bottom: 2px solid black;
-  outline: none;
-  font-size: 16px;
-}
-
-.input_field:focus ~ .input_label3{
-  top: 280px;
-  transition: 0.3s;
-  color: crimson;
-}
-
-.input_field4{
-  padding-top: 20px;
-  margin-top: 35px;
-  width: 100%;
-  height: 40px;
-  border: none;
-  border-bottom: 2px solid black;
-  outline: none;
-  font-size: 16px;
-}
-.input_field4:focus{
-  border-color: crimson;
-}
-
-.input_field4:focus ~ label{
-  top: 355px;
-  transition: 0.3s;
-  color: crimson;
-}
-
-.Fields{
-  width: auto;
-  display: block;
-}
-
-.input_label2{
-  position: absolute;
-  left: 605px;
-  top: 380px;
-  pointer-events: none;
-  font-size: 16px;
-}
-
-.container{
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;  
-  justify-content: center;
-  align-items: center;
-}
-
-.form-group{
-  margin: 1em;
-  transition: all .3s;
-}
-
-.form-label{
-  font-size: 1em;
-  color: #aaa;
-  display: block;
-  opacity: 1;
-  transform: translateY(-1.4em);
-  transform-origin:0 0 ;
-  transition: all .3s;
-}
-
-.form-control{
-  box-shadow: none;
-  background-color: rgba(0,0,0,0.1);
-  border-radius: 0px;
- border-color: #ccc;
-  border-style: none none solid none;
-} */

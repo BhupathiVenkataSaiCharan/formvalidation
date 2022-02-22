@@ -6,13 +6,16 @@
     height: 100vh;
     padding: 20px;
     z-index: 99;
-    background-color:  #ffffff;
+    background-color: white;
+    color: #000;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: right 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .theme-menu.active {
     right: 0;
+    background-color: white;
+    color: #000;
 }
 
 .theme-menu__close {
@@ -29,6 +32,7 @@
 
 .mode-list {
     margin-top: 20px;
+    background-color: transparent;
 }
 
 .mode-list > li {
@@ -59,4 +63,39 @@
 
 .mode-list__color.active > i {
     transform: scale(1);
+}
+
+.light-background {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.dark-background {
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+.blue-color {
+    background-color: #349eff;
+    color: #fff;
+}
+
+.red-color {
+    background-color: #fb0b12;
+    color: #fff;
+}
+
+.cyan-color {
+    background-color: #10d4d2;
+    color: #fff;
+}
+
+.green-color {
+    background-color: #019707;
+    color: #fff;
+}
+
+.orange-color {
+    background-color: #d68102;
+    color: #fff;
 }

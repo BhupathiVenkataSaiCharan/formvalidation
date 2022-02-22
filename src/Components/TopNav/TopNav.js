@@ -6,6 +6,11 @@ import {Link} from "react-router-dom";
 
 import Dropdown from '../dropdown/Dropdown';
 
+// import "../assets/css/index.css"
+// import "../assets/css/theme.css"
+
+import ThemeMenu from '../thememenu/ThemeMenu';
+
 import notification from "../assets/JsonData/notification.json";
 import user_menu from "../assets/JsonData/user_menus.json";
 
@@ -64,9 +69,9 @@ const TopNav = () => {
                   renderFooter={()=><Link to="/homepage">View All</Link>}
                 />
               </div>
-              <div className='topnav__right-item'>
-                <Dropdown/>
-              </div>
+              {/* <div className='topnav__right-item1'>
+                <ThemeMenu/>
+              </div> */}
 
             </div>
       </div>

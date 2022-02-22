@@ -60,8 +60,7 @@ const Table = props => {
                     <div className="table__pagination">
                         {
                             range.map((item, index) => (
-                                <div key={index} className={`table__pagination-item 
-                                ${currPage === index ? 'active' : ''}`} 
+                                <div key={index} className={`table__pagination-item`} 
                                 onClick={() => selectPage(index)}>
                                     {item + 1}
                                 </div>
@@ -71,6 +70,7 @@ const Table = props => {
                 ) : null
             }
         </div>
+        // ${currPage === index? 'active' : ''}
     )
 }
 

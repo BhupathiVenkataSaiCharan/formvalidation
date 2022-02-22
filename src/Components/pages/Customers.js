@@ -28,7 +28,7 @@ const Customer = () => {
                   style={{borderRadius:"50%",margin:"20px",marginLeft:"40px",top:"35px",position:"fixed"}} />
                   <label style={{marginLeft:"95px",top:"60px",position:"fixed",fontSize:"25px"}}>Bizwy</label>
             <ul style={{position:"fixed",paddingTop:"150px"}}>
-              <NavLink exact to="/homepage" className="active-link" activeClassName="active">
+              <NavLink exact to="/admin" className="active-link" activeClassName="active">
                 <label style={{paddingRight:"5px",fontSize:"13px"}}><GridViewIcon/></label>
                 Dashboard</NavLink>
               <NavLink exact to="/customers" className="active-link" activeClassName="active"><label style={{paddingRight:"5px",fontSize:"18px"}}><PersonPinOutlinedIcon/></label>Customers</NavLink>

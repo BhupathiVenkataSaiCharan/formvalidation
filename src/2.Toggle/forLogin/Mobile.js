@@ -41,7 +41,7 @@ function Mobile () {
         if (Object.keys(passerrors).length) {
           setFormErrors(passerrors);
         } else {
-          navigate('/homepage');
+          navigate('/admin');
         }
     }
 

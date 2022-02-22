@@ -4,11 +4,7 @@ import './thememenu.css'
 
 import { useDispatch } from 'react-redux'
 
-// import ThemeAction from '../../redux/actions/ThemeAction'
-
-import PaletteIcon from '@mui/icons-material/Palette';
-import CloseIcon from '@mui/icons-material/Close';
-import CheckIcon from '@mui/icons-material/Check';
+import ThemeAction from "../redux/actions/ThemeAction";
 
 const mode_settings = [
     {
@@ -89,17 +85,17 @@ const ThemeMenu = () => {
 
     const dispatch = useDispatch()
 
-    // const setMode = mode => {
-    //     setcurrMode(mode.id)
-    //     localStorage.setItem('themeMode', mode.class)
-    //     dispatch(ThemeAction.setMode(mode.class))
-    // }
+    const setMode = mode => {
+        setcurrMode(mode.id)
+        localStorage.setItem('themeMode', mode.class)
+        dispatch(ThemeAction.setMode(mode.class))
+    }
 
-    // const setColor = color => {
-    //     setcurrColor(color.id)
-    //     localStorage.setItem('colorMode', color.class)
-    //     dispatch(ThemeAction.setColor(color.class))
-    // }
+    const setColor = color => {
+        setcurrColor(color.id)
+        localStorage.setItem('colorMode', color.class)
+        dispatch(ThemeAction.setColor(color.class))
+    }
 
     useEffect(() => {
         const themeClass = mode_settings.find(e => e.class === localStorage.getItem('themeMode', 'theme-mode-light'))
@@ -114,24 +110,22 @@ const ThemeMenu = () => {
 
     return (
         <div>
-            <button ref={menu_toggle_ref} className="dropdown__toggle" onClick={() => setActiveMenu()}
-                    style={{border:"none"}}>
-                <PaletteIcon/>
+            <button ref={menu_toggle_ref} className="dropdown__toggle" onClick={() => setActiveMenu()}>
+                <i className='bx bx-palette'></i>
             </button>
             <div ref={menu_ref} className="theme-menu">
                 <h4>Theme settings</h4>
-                <button className="theme-menu__close" style={{border:"none"}} onClick={() => closeMenu()}>
-                   <CloseIcon/>
+                <button className="theme-menu__close" onClick={() => closeMenu()}>
+                    <i className='bx bx-x'></i>
                 </button>
                 <div className="theme-menu__select">
                     <span>Choose mode</span>
-                    {/* onClick={() => setMode(item)} */}
                     <ul className="mode-list">
                         {
                             mode_settings.map((item, index) => (
-                                <li key={index} >
+                                <li key={index} onClick={() => setMode(item)}>
                                     <div className={`mode-list__color ${item.background} ${item.id === currMode ? 'active' : ''}`}>
-                                    <CheckIcon/>
+                                        <i className='bx bx-check'></i>
                                     </div>
                                     <span>{item.name}</span>
                                 </li>
@@ -141,19 +135,18 @@ const ThemeMenu = () => {
                 </div>
                 <div className="theme-menu__select">
                     <span>Choose color</span>
-                    {/* onClick={() => setMode(item)} */}
-                    <ul className="mode-list">
+                    {/* <ul className="mode-list">
                         {
                             color_settings.map((item, index) => (
-                                <li key={index} >
-                                    <div className={`mode-list__color ${item.background} ${item.id === currMode ? 'active' : ''}`}>
-                                        <CheckIcon/>
+                                <li key={index} onClick={() => setColor(item)}>
+                                    <div className={`mode-list__color ${item.background} ${item.id === currColor ? 'active' : ''}`}>
+                                        <i className='bx bx-check'></i>
                                     </div>
                                     <span>{item.name}</span>
                                 </li>
                             ))
                         }
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
         </div>

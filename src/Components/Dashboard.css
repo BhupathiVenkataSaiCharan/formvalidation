@@ -33,6 +33,11 @@
     width: 200px;
 }
 
+.active:hover{
+    background-color: #349eff;
+    color: #fff
+}
+
 ul{
     width: 250px;
     height: 100vh;
@@ -57,6 +62,8 @@ ul a:hover{
     width: 200px;
     transition: 0.2s ease;
 }
+
+
 
 /* .rightside{
     height: 100vh;

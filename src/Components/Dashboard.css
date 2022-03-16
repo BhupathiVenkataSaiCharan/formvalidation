@@ -13,12 +13,6 @@
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: 0.7px; 
 } */
-/* 
-@media screen and (min-width: 760px){
-    .leftside, .rightside{
-        height: 100vh;
-    }    
-} */
 
 /* .leftside{
     background-color: rgb(49, 32, 49);

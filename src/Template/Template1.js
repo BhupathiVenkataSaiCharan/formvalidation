@@ -24,15 +24,16 @@ const Template1 = () => {
             <a className="navbar-brand" href="#Navbar">
               <img src='http://www.bizwy.com/images/Bizwy-logo-180.svg' alt='' width="100" height="100"/>
             </a>
-              <button className="navbar-toggler" 
+              <button className="navbar-toggler"
+                        style={{backgroundColor:"transparent",color:"white"}} 
                       type="button" 
                       data-bs-toggle="collapse" 
                       data-bs-target="#navbarSupportedContent" 
                       aria-controls="navbarSupportedContent" 
                       aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon" style={{padding:"5px",}}>M</span>
               </button> 
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div className="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li className="nav-item">
                         <a className="nav-link" aria-current="page" href="#Home">Home</a>
@@ -82,20 +83,24 @@ const Template1 = () => {
                     <div className='col-lg-12 box'>
                         <div className='carding'>
                             <h3>
-                                <img src="../../images/services/package.svg" alt="gauge" style={{background:"transparent",width:"40px",height:"40px"}} />
-                                <i className=''></i>
+                                {/* <img src="../../images/services/package.svg" alt="gauge" style={{background:"transparent",width:"40px",height:"40px"}} /> */}
+                                <i className='far fa-chart-line' style={{color:"#e78b90",fontSize:"40px"}}></i>
                             </h3>
                             <h6>Live Sales Dashboard</h6>
                             <p>Using straight forward visualizations we ensure your sales team know where they stand in a glance.</p>
                         </div>
                         <div className='carding'>
-                            <h3><img src='../../images/services/menu.svg' alt=''  width="40" height="40"/></h3>
+                            <h3>
+                                <i className='fal fa-clipboard' style={{color:"#e78b90",fontSize:"40px"}}></i>
+                                {/* <img src='../../images/services/menu.svg' alt=''  width="40" height="40"/> */}
+                            </h3>
                             <h6>Menu Management</h6>
                             <p>Update your restaurant menu &nbsp;anytime, where you don't even need to be physically at your restaurant.</p>
                         </div>
                         <div className='carding'>
                             <h3>
-                            <img src="../../images/services/discount.svg" alt="discount" style={{background:"transparent",width:"40px",height:"40px"}} />
+                                <i className='fal fa-percent' style={{color:"#e78b90",fontSize:"40px"}}></i>
+                            {/* <img src="../../images/services/discount.svg" alt="discount" style={{background:"transparent",width:"40px",height:"40px"}} /> */}
                             </h3>
                             <h6>Offers & Promotions</h6>
                             <p>We help you to create a focused marketing approach and a platform &nbsp;&nbsp;&nbsp;to cross-sell and upsell.</p>
@@ -123,8 +128,8 @@ const Template1 = () => {
                         <div className='col-lg-12 profile'>
                             <div className='profile-card'>
                                 <h3>
-                                    <img src="../../images/img1.jpg" alt="gauge" 
-                                            style={{background:"transparent",width:"100px",height:"100px",borderRadius:"50%",border:"1px solid red"}} />
+                                    <img src="https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_1.jpg" alt="gauge" 
+                                            style={{background:"transparent",width:"100px",height:"100px",borderRadius:"50%",border:"3px solid #e78b90"}} />
                                 </h3>
                                 <h6>Tina</h6>
                                 <p>CEO / Co-Founder</p>
@@ -134,8 +139,8 @@ const Template1 = () => {
                             </div>
                             <div className='profile-card'>
                                 <h3>
-                                    <img src="../../images/img1.jpg" alt="gauge" 
-                                            style={{background:"transparent",width:"100px",height:"100px",borderRadius:"50%",border:"1px solid red"}} />
+                                    <img src="https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_4.jpg" alt="gauge" 
+                                            style={{background:"transparent",width:"100px",height:"100px",borderRadius:"50%",border:"3px solid #e78b90"}} />
                                 </h3>
                                 <h6>Andrew</h6>
                                 <p>Product Designer</p>
@@ -145,8 +150,8 @@ const Template1 = () => {
                             </div>
                             <div className='profile-card'>
                                 <h3>
-                                    <img src="../../images/img1.jpg" alt="gauge" 
-                                            style={{background:"transparent",width:"100px",height:"100px",borderRadius:"50%",border:"1px solid red"}} />
+                                    <img src="https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_3.jpg" alt="gauge" 
+                                            style={{background:"transparent",width:"100px",height:"100px",borderRadius:"50%",border:"3px solid #e78b90"}} />
                                 </h3>
                                 <h6>Michelle</h6>
                                 <p>Marketing Hacker</p>
@@ -347,6 +352,46 @@ const Template1 = () => {
                         <span style={{fontSize:"14px", textAlign:"center",color:"#777777"}}>Bizwy © 2019. All Rights Reserved.</span>
                     </p>
                 </div>
+
+                <ul className="nav nav-text" role="tablist">
+                <li className="active">
+                    <a href="#testimonial1" role="tab" data-toggle="tab" aria-expanded="true">
+                        <div className="image-clients">
+                            <img alt="..." className="img-circle" src="assets/img/faces/face_5.jpg"/>
+                        </div>
+                    </a>
+                </li>
+                <li className="">
+                    <a href="#testimonial2" role="tab" data-toggle="tab" aria-expanded="false">
+                        <div className="image-clients">
+                            <img alt="..." className="img-circle" src="assets/img/faces/face_6.jpg"/>
+                        </div>
+                    </a>
+                </li>
+                <li className="">
+                    <a href="#testimonial3" role="tab" data-toggle="tab" aria-expanded="false">
+                        <div className="image-clients">
+                            <img alt="..." class="img-circle" src="assets/img/faces/face_2.jpg"/>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div className="tab-content">
+                <div className="tab-pane active" id="testimonial1">
+                    <p className="description">
+                        And I used a period because contrary to popular belief I strongly dislike exclamation points! We no longer have to be scared of the truth feels good to be home In Roman times the artist would contemplate proportions and colors. Now there is only one important color... Green I even had the pink polo I thought I was Kanye I promise I will never let the people down. I want a better life for all!
+                    </p>
+                </div>
+                <div className="tab-pane" id="testimonial2">
+                    <p className="description">Green I even had the pink polo I thought I was Kanye I promise I will never let the people down. I want a better life for all! And I used a period because contrary to popular belief I strongly dislike exclamation points! We no longer have to be scared of the truth feels good to be home In Roman times the artist would contemplate proportions and colors. Now there is only one important color...
+                    </p>
+                </div>
+                <div className="tab-pane" id="testimonial3">
+                    <p className="description"> I used a period because contrary to popular belief I strongly dislike exclamation points! We no longer have to be scared of the truth feels good to be home In Roman times the artist would contemplate proportions and colors. The 'Gaia' team did a great work while we were collaborating. They provided a vision that was in deep connection with our needs and helped us achieve our goals.
+                    </p>
+                </div>
+
+            </div>
     </>
   )
 }

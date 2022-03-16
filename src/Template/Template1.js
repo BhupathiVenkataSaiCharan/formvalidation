@@ -1,6 +1,7 @@
 import React from 'react'
 import "./template.css";
 import { useState } from "react";
+import Scroll from './Scroll';
 
 const Template1 = () => {
 
@@ -392,6 +393,7 @@ const Template1 = () => {
                 </div>
 
             </div>
+            <Scroll/>
     </>
   )
 }

@@ -24,4 +24,4 @@ const exportDefault = {
     getTheme
 }
 
-export default exportDefault
+export default exportDefault;

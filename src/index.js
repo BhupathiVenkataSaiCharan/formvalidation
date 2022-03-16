@@ -13,8 +13,6 @@ const store = createStore(
   rootReducer
 )
 
-// document.title = "Bizwy";
-
 ReactDOM.render(
   <Provider store={store}>
     <App />

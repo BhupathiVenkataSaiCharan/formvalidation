@@ -57,7 +57,9 @@ const Table = props => {
             </div>
             {
                 pages > 1 ? (
+                    // ${currPage === index? 'active' : ''}
                     <div className="table__pagination">
+                    
                         {
                             range.map((item, index) => (
                                 <div key={index} className={`table__pagination-item`} 
@@ -70,7 +72,6 @@ const Table = props => {
                 ) : null
             }
         </div>
-        // ${currPage === index? 'active' : ''}
     )
 }
 

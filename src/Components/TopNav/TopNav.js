@@ -16,6 +16,8 @@ import user_menu from "../assets/JsonData/user_menus.json";
 
 import user_image from "../assets/images/tuat.png" 
 
+/* */
+
 const curr_user = {
   display_name: 'Charan',
   image: user_image

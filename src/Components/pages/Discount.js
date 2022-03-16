@@ -59,6 +59,8 @@ const Discpunt = () => {
           {/* <div className='row' style={{marginLeft:"-70px"}}>
             <CustomerPage/>  
           </div> */}
+          {/* <div className='leftside'> */}
+
         </div>
       </div>
       </div>    

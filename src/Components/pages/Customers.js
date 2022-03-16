@@ -66,6 +66,8 @@ const Customer = () => {
         </div>
       </div>
     </div>
+          {/* <div className='leftside'> */}
+
           
     </>
   ) 

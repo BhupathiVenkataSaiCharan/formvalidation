@@ -22,6 +22,8 @@ const Analytics = () => {
       <div className='row'>
         <div className='col-lg-3'>
           {/* <div className='leftside'> */}
+
+          {/* <div className='leftside'> */}
           <img src="images/img1.jpg" alt='' width="50px" height="50px" 
                   style={{borderRadius:"50%",margin:"20px",marginLeft:"40px",top:"35px",position:"fixed"}} />
                   <label style={{marginLeft:"95px",top:"60px",position:"fixed",fontSize:"25px"}}>Bizwy</label>

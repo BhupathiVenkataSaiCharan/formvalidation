@@ -62,6 +62,9 @@ const Inventory = () => {
         </div>
       </div>
       </div>    
+          {/* <div className='leftside'> */}
+
+
     </>
   ) 
 };

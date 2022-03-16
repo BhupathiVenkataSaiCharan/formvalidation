@@ -64,6 +64,8 @@ const Customers = () => {
           </div> */}
                   {/* <TopNav/>
           <CustomerPage/> */}
+          {/* <div className='leftside'> */}
+
         </div>
       </div>
       </div>    

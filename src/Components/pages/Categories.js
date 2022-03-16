@@ -62,6 +62,8 @@ const Categories = () => {
         </div>
       </div>
       </div>    
+          {/* <div className='leftside'> */}
+
     </>
   ) 
 };

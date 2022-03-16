@@ -27,9 +27,9 @@ function Routing(){
           <Routes>
             <Route exact="true" path="/" element={<Login/>} />
             <Route exact="true" path="/reset" element={<Reset/>} />
-            <Route exact='true' path="/help" element={<Help/>} />
-            <Route exact='true' path="/afterlogin" element={<AfterLogin/>} />
-            <Route exact='true' path="/changepassword" element={<ChangePassword/>} />
+            <Route exact="true" path="/help" element={<Help/>} />
+            <Route exact="true" path="/afterlogin" element={<AfterLogin/>} />
+            <Route exact="true" path="/changepassword" element={<ChangePassword/>} />
             <Route exact="true" path="/admin" element={<Admin/>} />
             <Route exact="true" path="/customers" element={<Customers/>} />
             <Route exact="true" path="/products" element={<Products/>} />

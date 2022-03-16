@@ -16,8 +16,10 @@ function Mobile () {
 
 
     const handleChange = (e) =>{
-        const{name,value} = e.target;
-        setFormValues({...formValues, [name]:value});
+        // const{name,value} = e.target;
+        const value = e.target.value;
+        const name = e.target.name;
+        setFormValues((prev)=>({...prev, [name]:value}));
     }
 
     const handleSubmit = (e) =>{
@@ -41,18 +43,28 @@ function Mobile () {
         if (Object.keys(passerrors).length) {
           setFormErrors(passerrors);
         } else {
-          navigate('/admin');
+          navigate("/admin");
         }
     }
 
-    
+    useEffect(()=>{
+        const formS = JSON.parse(localStorage.getItem("user"));
+        if(formValues ===""){
+            setFormValues((prev)=>({...prev, ...formS}));
+        }
+    },[]);
 
     useEffect(()=>{
-        console.log(formErrors);
-        if(Object.keys(formErrors).length ===0 && !isSubmit){
-            console.log(formValues);
-        }
-    },[formErrors])
+        localStorage.setItem("user", JSON.stringify(formValues));
+    },[formValues]);
+    
+
+    // useEffect(()=>{
+    //     console.log(formErrors);
+    //     if(Object.keys(formErrors).length ===0 && !isSubmit){
+    //         console.log(formValues);
+    //     }
+    // },[formErrors])
 
     const validates = (values) =>{
         const passerrors ={}

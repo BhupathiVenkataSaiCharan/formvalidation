@@ -19,26 +19,6 @@ const Welcome = () => {
 
   window.addEventListener('scroll', changeColor);
 
-  // button to top 
-
-  // const backToTop = document.querySelector("#back-to-top");
-
-  // window.addEventListener("scroll", scrollFunction);
-
-  // function scrollFunction(){
-  //   if(window.pageYOffset > 80){
-  //     backToTop.style.display ="block";
-  //   }else{
-  //     backToTop.style.display ="none";
-  //   }
-  // }
-
-  // backToTop.addEventListener("click", backToTopBtn);
-
-  // function backToTopBtn(){
-  //   window.scrollTo(0, 0);
-  // }
-
   
   return (
     <>

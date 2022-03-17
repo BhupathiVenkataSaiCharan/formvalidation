@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import "./template.css";
 import { useState } from "react";
 import Scroll from './Scroll';
@@ -13,7 +13,7 @@ const Template1 = () => {
         }else{
             setColor(false)
         }
-    } 
+    }
 
   window.addEventListener('scroll', changeColor);
 
@@ -23,7 +23,10 @@ const Template1 = () => {
                               : 'navbar fixed-top navbar-expand-lg'}>
           <div className='container-fluid'>
             <a className="navbar-brand" href="#Navbar">
-              <img src='http://www.bizwy.com/images/Bizwy-logo-180.svg' alt='' width="100" height="100"/>
+              <img src='http://www.bizwy.com/images/Bizwy-logo-180.svg'  
+                    alt='' width="100" height="100"
+                    style={{marginLeft:"50px"}}
+                    />
             </a>
               <button className="navbar-toggler"
                         style={{backgroundColor:"transparent",color:"white"}} 
@@ -35,7 +38,7 @@ const Template1 = () => {
                 <span className="navbar-toggler-icon" style={{padding:"5px",}}>M</span>
               </button> 
             <div className="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul className="navbar-nav ms-auto p-lg-5 mb-lg-0">
                     <li className="nav-item">
                         <a className="nav-link" aria-current="page" href="#Home">Home</a>
                     </li>
@@ -54,12 +57,15 @@ const Template1 = () => {
         </nav>
         <div className=' row gx-0 background-1'>
                 <div className='bg-1-overlay'>
-                <div className='col-lg-12 filter-color-red'>
+                    <div className='col-lg-12 filter-color-red'>
                         <div className='parallax filter filter-color-red'>
                             <div className='homepage d-flex justify-content-center align-items-center'>
                                 <div className="title text-center">
                                     <img src='http://www.bizwy.com/images/Bizwy-logo-180.svg' className='title-logo' 
                                             alt=''/>
+                                    <div className='headin'>
+                                        <h6>♦</h6>
+                                    </div>
                                     <h1>IS ALL ABOUT BUSINESS GROWTH</h1>
                                 </div>
                             </div>
@@ -69,10 +75,12 @@ const Template1 = () => {
             </div>
         <div className='section'>
             <div className='container-fluid'>
-                <div className='row'>
+                <div className='row gx-0'>
                     <div className='title-area'>
                         <h2>Our Services</h2>
-                        <div className='separator separator-danger'></div>
+                        <div className='headina'>
+                            <h6>✻</h6>
+                        </div>
                         <p className='description'>We promise you a new look and more importantly, 
                             a new attitude. We build that by getting to know you,
                             your needs and creating the best looking clothes.
@@ -117,7 +125,9 @@ const Template1 = () => {
                             <div className='col-lg-12'>
                                 <div className='title-areaw'>
                                     <h2>Who We Are</h2>
-                                    <div className='separator1 separator-danger'></div>
+                                    <div className='headinw'>
+                                        <h6>✻</h6>
+                                    </div>
                                     <p className='description1'>We promise you a new look and more importantly,
                                     a new attitude. We build that by getting to know you,
                                     your needs and creating the best looking clothes.
@@ -128,33 +138,33 @@ const Template1 = () => {
                         <div className='row gx-0'>
                         <div className='col-lg-12 profile'>
                             <div className='profile-card'>
-                                <h3>
+                                <h2>
                                     <img src="https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_1.jpg" alt="gauge" 
                                             style={{background:"transparent",width:"100px",height:"100px",borderRadius:"50%",border:"3px solid #e78b90"}} />
-                                </h3>
-                                <h6>Tina</h6>
+                                </h2>
+                                <h3>Tina</h3>
                                 <p>CEO / Co-Founder</p>
                                 <p>I miss the old Kanye I gotta say at that time I’d like to meet Kanye And 
                                     I promise the power is in the people and I will
                                     use the power given by the people to bring everything I have back to the people.</p>
                             </div>
                             <div className='profile-card'>
-                                <h3>
+                                <h2>
                                     <img src="https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_4.jpg" alt="gauge" 
                                             style={{background:"transparent",width:"100px",height:"100px",borderRadius:"50%",border:"3px solid #e78b90"}} />
-                                </h3>
-                                <h6>Andrew</h6>
+                                </h2>
+                                <h3>Andrew</h3>
                                 <p>Product Designer</p>
                                 <p>I miss the old Kanye I gotta say at that time I’d like to meet Kanye And 
                                     I promise the power is in the people and I will
                                     use the power given by the people to bring everything I have back to the people.</p>
                             </div>
                             <div className='profile-card'>
-                                <h3>
+                                <h2>
                                     <img src="https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_3.jpg" alt="gauge" 
                                             style={{background:"transparent",width:"100px",height:"100px",borderRadius:"50%",border:"3px solid #e78b90"}} />
-                                </h3>
-                                <h6>Michelle</h6>
+                                </h2>
+                                <h3>Michelle</h3>
                                 <p>Marketing Hacker</p>
                                 <p>I miss the old Kanye I gotta say at that time I’d like to meet Kanye And 
                                     I promise the power is in the people and I will
@@ -168,35 +178,54 @@ const Template1 = () => {
             <div className='profilecards'>
             <div className='row gx-0'>
                 <div className='testimonials'>
-                    <p className='heading'>Here are some</p>
+                    <h5>Here are some</h5>
                     <h2>Client Testimonials</h2>
-                    <div className='separator separator-danger'></div>
+                    <div className='headint'>
+                        <h6>∎</h6>
+                    </div>
                 </div>
             </div>
             <div className='testimomnials data'>
-                <ul className="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                <div className='old to new image buttons toogle from w3schools/newthings-1'>
+                    {/* <ul className="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">
-                        <button className="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
-                            {/* <p className='onepic'> */}
+                        <button className="nav-link buton" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
                                 <img src='https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_5.jpg'
                                         alt="" width="80" height="80"/>
-                            {/* </p>             */}
                         </button>
                     </li>
                     <li className="nav-item" role="presentation">
                         <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
-                            {/* <p className='onepic'> */}
                                 <img src='https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_6.jpg'
                                         alt="" width="80" height="80"/>
-                            {/* </p>  */}
                         </button>
                     </li>
                     <li className="nav-item" role="presentation">
                         <button className="nav-link active" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
-                            {/* <p className='onepic'> */}
                                 <img src='https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_2.jpg' 
                                         alt="" width="80" height="80"/>
-                            {/* </p>  */}
+                        </button>
+                    </li>
+                </ul> */}
+                </div>
+                <ul className="nav justify-content-center" id="myTab" role="tablist"
+                    style={{listStyle:"none",display:"flex",justifyContent:"center"}}>
+                    <li className="nav-item" role="presentation">
+                        <button className='nav-link buton text-lg-center' id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                            <img src='https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_5.jpg'
+                                    alt="" width="100" height="100" style={{borderRadius:"50%",margin:"-20px"}}/>
+                        </button>
+                    </li>
+                    <li className="nav-item" role="presentation">
+                        <button className='nav-link buton' id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                            <img className='pic' src='https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_6.jpg'
+                                    alt="" width="100" height="100" style={{borderRadius:"50%",margin:"-20px"}}/>
+                        </button>
+                    </li>
+                    <li className="nav-item" role="presentation">
+                        <button className='nav-link active buton'id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+                            <img src='https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_2.jpg' 
+                                    alt="" width="100" height="100" style={{borderRadius:"50%",margin:"-20px"}}/>
                         </button>
                     </li>
                 </ul>
@@ -225,8 +254,10 @@ const Template1 = () => {
                         <div className='col-lg-12'>
                             <div className='title-area1 text-lg-center'>
                                 <h2>Do you want to work with us?</h2>
-                                <div className='separator2 separator-danger'></div>
-                                <p className='description2'>
+                                <div className='headin'>
+                                    <h6>♦</h6>
+                                </div>
+                                <p>
                                 We are keen on creating a second skin for anyone with a sense of style!
                                  We design our clothes having our customers in mind and we never disappoint!
                                 </p>
@@ -241,7 +272,7 @@ const Template1 = () => {
                             <div className="info">
                                 <h5 className='titlel'>Company</h5>
                                 <nav>
-                                    <ul>
+                                    <ul className='listhov'>
                                         <li>
                                             <a href='#h'>Home</a>
                                         </li>
@@ -265,7 +296,7 @@ const Template1 = () => {
                             <div className="info">
                                 <h5 className='titlel'>Help and Support</h5>
                                 <nav>
-                                    <ul>
+                                    <ul  className='listhov'>
                                         <li>
                                             <a href='#h'>Contact us</a>
                                         </li>
@@ -322,7 +353,7 @@ const Template1 = () => {
                             <div className="info">
                                 <h5 className='titlel'>Follow us on</h5>
                                 <nav>
-                                    <ul>
+                                    <ul className='listhov'>
                                         <li className='social'>
                                             <a href='#h'>
                                                 <i className='fab fa-facebook-square'></i>&nbsp;&nbsp;<span className='socialname'>FACEBOOK</span>
@@ -354,46 +385,12 @@ const Template1 = () => {
                     </p>
                 </div>
 
-                <ul className="nav nav-text" role="tablist">
-                <li className="active">
-                    <a href="#testimonial1" role="tab" data-toggle="tab" aria-expanded="true">
-                        <div className="image-clients">
-                            <img alt="..." className="img-circle" src="assets/img/faces/face_5.jpg"/>
-                        </div>
-                    </a>
-                </li>
-                <li className="">
-                    <a href="#testimonial2" role="tab" data-toggle="tab" aria-expanded="false">
-                        <div className="image-clients">
-                            <img alt="..." className="img-circle" src="assets/img/faces/face_6.jpg"/>
-                        </div>
-                    </a>
-                </li>
-                <li className="">
-                    <a href="#testimonial3" role="tab" data-toggle="tab" aria-expanded="false">
-                        <div className="image-clients">
-                            <img alt="..." class="img-circle" src="assets/img/faces/face_2.jpg"/>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <div className="tab-content">
-                <div className="tab-pane active" id="testimonial1">
-                    <p className="description">
-                        And I used a period because contrary to popular belief I strongly dislike exclamation points! We no longer have to be scared of the truth feels good to be home In Roman times the artist would contemplate proportions and colors. Now there is only one important color... Green I even had the pink polo I thought I was Kanye I promise I will never let the people down. I want a better life for all!
-                    </p>
-                </div>
-                <div className="tab-pane" id="testimonial2">
-                    <p className="description">Green I even had the pink polo I thought I was Kanye I promise I will never let the people down. I want a better life for all! And I used a period because contrary to popular belief I strongly dislike exclamation points! We no longer have to be scared of the truth feels good to be home In Roman times the artist would contemplate proportions and colors. Now there is only one important color...
-                    </p>
-                </div>
-                <div className="tab-pane" id="testimonial3">
-                    <p className="description"> I used a period because contrary to popular belief I strongly dislike exclamation points! We no longer have to be scared of the truth feels good to be home In Roman times the artist would contemplate proportions and colors. The 'Gaia' team did a great work while we were collaborating. They provided a vision that was in deep connection with our needs and helped us achieve our goals.
-                    </p>
-                </div>
+{/*Scroll To Top button*/}
 
-            </div>
             <Scroll/>
+
+{/*Scroll To Top button*/}
+    
     </>
   )
 }

@@ -38,7 +38,11 @@ return (
    height: "70px",
    cursor: "pointer",
    borderRadius:"50%",
-   color: "green"}}>To top</button>
+   border:"2px solid black",
+   color: "#c78b90",
+   backgroundColor:"transparent" }}>
+       <i className='far fa-arrow-up fa-2x'></i>
+   </button>
     </>
 );
 }

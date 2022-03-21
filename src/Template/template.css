@@ -37,11 +37,12 @@ background-color: #4CAF50; /* Green */
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 35px;
+  margin: 4px 30px;
   cursor: pointer;
-  width:100px;
-  height:100px;
+  width:80px;
+  height:80px;
   border-radius: 50%;
+  filter: opacity(50%);
 }
 
 .headin h6 {
@@ -73,7 +74,7 @@ background-color: #4CAF50; /* Green */
 .navbar-bg{
     background-color: white;
     border-bottom: 1px solid gray;
-    height: 80px;
+    height: 70px;
 }
 
 .navbar-bg .nav-item .nav-link{
@@ -83,6 +84,7 @@ background-color: #4CAF50; /* Green */
 .active{
     /* box-shadow: 5px 5px 4px 2px gray; */
     box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.5);
+    filter: brightness(100%);
 }
 
 .tab-content .active{
@@ -141,7 +143,7 @@ background-color: #4CAF50; /* Green */
     display: inline-block;
     margin: 0 20px 4px 0;
     height: 2px;
-    content: " ";
+    content: "";
     text-shadow: none;
     background-color: #e78b90;
     width: 140px;
@@ -456,7 +458,7 @@ background-color: #4CAF50; /* Green */
     font-size: 2.4em;
     font-weight: bold;
     color: white;
-    /* margin-top: 40px; */
+    margin-bottom: 20px;
 }
 
 

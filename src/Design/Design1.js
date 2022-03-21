@@ -9,7 +9,7 @@ const Design1 = () => {
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
     const [passwordShown, setPasswordShown] = useState(false);
-    const [rememberMe, setRememberMe] = useState();
+    const [rememberMe, setRememberMe] = useState({});
 
 
     const togglePassword = (e) => {
@@ -23,6 +23,12 @@ const Design1 = () => {
         setFormValues({...formValues, [name]:value});
         console.log(formValues);
     }
+
+    // const handleSubmit = (e) =>{
+    //     e.preventDefault();
+    //     setFormErrors(validate(formValues));
+    //     setIsSubmit(true);
+    // }
 
     let navigate = useNavigate();
 
@@ -44,8 +50,15 @@ const Design1 = () => {
         if (Object.keys(formErrors).length === 0 && isSubmit) {
             console.log(formValues);
         }
+        // setFormErrors(formErrors);
+        //   } else {
+        //     setIsSubmit(true);
+        //   }
     },[formErrors])
 
+    // useEffect(()=>{
+    //     localStorage.getItem("values",JSON.stringify(formValues));
+    // },[formValues])
 
     const errors = {}
 
@@ -79,6 +92,10 @@ const Design1 = () => {
             <div className="row">
     	        <div className="col-lg-4 offset-lg-4 float-lg-start">
     		        <div className="panel panel-default">
+			  	        <div className="panel-heading">
+                          <img className='panel-img' src='http://www.bizwy.com/images/Bizwy-logo-180.svg'
+                                alt='logo' width="100" height="100" />
+			 	        </div>
                     <div className="panel-body">
                         <form>
                             <div className="form-group">
@@ -89,6 +106,7 @@ const Design1 = () => {
                                         onChange={handleChange}
                                     
                                         />
+                                    <p>{formErrors.email}</p>
                             </div>
                             <div className="form-group">
                                 <input className="form-control" 
@@ -97,13 +115,15 @@ const Design1 = () => {
                                         value={formValues.password}
                                         onChange={handleChange}
                                         />
+                                <p>{formErrors.password}</p>
                                 <button className='buton' onClick={togglePassword}>
                                     <i className='fas fa-eye'></i>
                                 </button>
                             </div>
                             <div className="checkbox">
                                 <label>
-                                    <input name="remember" type="checkbox" value={rememberMe}/> Remember Me
+                                    <input name="remember" type="checkbox" 
+                                            value={rememberMe}/> Remember Me
                                 </label>
                             </div>
                             <button className="btn btn-lg btn-success btn-block" 

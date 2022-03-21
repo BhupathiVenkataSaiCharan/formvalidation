@@ -23,9 +23,8 @@ const Template1 = () => {
                               : 'navbar fixed-top navbar-expand-lg'}>
           <div className='container-fluid'>
             <a className="navbar-brand" href="#Navbar">
-              <img src='http://www.bizwy.com/images/Bizwy-logo-180.svg'  
-                    alt='' width="100" height="100"
-                    style={{marginLeft:"50px"}}
+              <img src='http://www.bizwy.com/images/Bizwy-logo-180.svg' alt=''
+                    style={{marginLeft:"50px",width:"120px",height:"120px"}}
                     />
             </a>
               <button className="navbar-toggler"
@@ -38,7 +37,7 @@ const Template1 = () => {
                 <span className="navbar-toggler-icon" style={{padding:"5px",}}>M</span>
               </button> 
             <div className="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul className="navbar-nav ms-auto p-lg-5 mb-lg-0">
+                <ul className="navbar-nav ms-auto p-lg-4">
                     <li className="nav-item">
                         <a className="nav-link" aria-current="page" href="#Home">Home</a>
                     </li>
@@ -55,9 +54,9 @@ const Template1 = () => {
             </div>
           </div>
         </nav>
-        <div className=' row gx-0 background-1'>
+        <div className=' row gx-0 background-1' id='Home'>
                 <div className='bg-1-overlay'>
-                    <div className='col-lg-12 filter-color-red'>
+                    <div className='col-lg-12 col-sm-12 col-md-12 filter-color-red'>
                         <div className='parallax filter filter-color-red'>
                             <div className='homepage d-flex justify-content-center align-items-center'>
                                 <div className="title text-center">
@@ -73,7 +72,7 @@ const Template1 = () => {
                     </div>
                 </div>
             </div>
-        <div className='section'>
+        <div className='section' id="Services">
             <div className='container-fluid'>
                 <div className='row gx-0'>
                     <div className='title-area'>
@@ -90,13 +89,15 @@ const Template1 = () => {
                 
                 <div className='row gx-0'>
                     <div className='col-lg-12 box'>
-                        <div className='carding'>
+                        <div>
+                            <div className='carding'>
                             <h3>
                                 {/* <img src="../../images/services/package.svg" alt="gauge" style={{background:"transparent",width:"40px",height:"40px"}} /> */}
                                 <i className='far fa-chart-line' style={{color:"#e78b90",fontSize:"40px"}}></i>
                             </h3>
                             <h6>Live Sales Dashboard</h6>
                             <p>Using straight forward visualizations we ensure your sales team know where they stand in a glance.</p>
+                        </div>
                         </div>
                         <div className='carding'>
                             <h3>
@@ -118,7 +119,7 @@ const Template1 = () => {
                 </div>
             </div>
         </div>
-        <div className='background-2'>
+        <div className='background-2' id='BusinessSupported'>
             <div className='bg-2-overlay'>
                 <div className='section'>
                         <div className='row gx-0'>
@@ -213,19 +214,19 @@ const Template1 = () => {
                     <li className="nav-item" role="presentation">
                         <button className='nav-link buton text-lg-center' id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
                             <img src='https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_5.jpg'
-                                    alt="" width="100" height="100" style={{borderRadius:"50%",margin:"-20px"}}/>
+                                    alt="" width="90" height="90" style={{borderRadius:"50%",margin:"-20px"}}/>
                         </button>
                     </li>
                     <li className="nav-item" role="presentation">
                         <button className='nav-link buton' id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
                             <img className='pic' src='https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_6.jpg'
-                                    alt="" width="100" height="100" style={{borderRadius:"50%",margin:"-20px"}}/>
+                                    alt="" width="90" height="90" style={{borderRadius:"50%",margin:"-20px"}}/>
                         </button>
                     </li>
                     <li className="nav-item" role="presentation">
                         <button className='nav-link active buton'id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
                             <img src='https://demos.creative-tim.com/gaia-bootstrap-template/assets/img/faces/face_2.jpg' 
-                                    alt="" width="100" height="100" style={{borderRadius:"50%",margin:"-20px"}}/>
+                                    alt="" width="90" height="90" style={{borderRadius:"50%",margin:"-20px"}}/>
                         </button>
                     </li>
                 </ul>
@@ -248,7 +249,7 @@ const Template1 = () => {
                 </div>
             </div>
             </div>
-            <div className='row gx-0 background-3'>
+            <div className='row gx-0 background-3' id='ContactUs'>
                 <div className="bg-3-overlay">
                     <div className='row gx-0'>
                         <div className='col-lg-12'>
@@ -261,7 +262,11 @@ const Template1 = () => {
                                 We are keen on creating a second skin for anyone with a sense of style!
                                  We design our clothes having our customers in mind and we never disappoint!
                                 </p>
-                                </div>
+                                <button className='btn btn-primary' 
+                                        style={{marginTop:"30px",width:"200px",height:"60px",
+                                                backgroundColor:"#e78b90",border:"none"}}>
+                                Contact Us</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -274,7 +279,7 @@ const Template1 = () => {
                                 <nav>
                                     <ul className='listhov'>
                                         <li>
-                                            <a href='#h'>Home</a>
+                                            <a href='#Home'>Home</a>
                                         </li>
                                         <li>
                                             <a href='#h'>Find offers</a>
@@ -298,7 +303,7 @@ const Template1 = () => {
                                 <nav>
                                     <ul  className='listhov'>
                                         <li>
-                                            <a href='#h'>Contact us</a>
+                                            <a href='#ContactUs'>Contact us</a>
                                         </li>
                                         <li>
                                             <a href='#h'>How it works</a>
@@ -384,12 +389,30 @@ const Template1 = () => {
                         <span style={{fontSize:"14px", textAlign:"center",color:"#777777"}}>Bizwy © 2019. All Rights Reserved.</span>
                     </p>
                 </div>
-
 {/*Scroll To Top button*/}
 
             <Scroll/>
 
 {/*Scroll To Top button*/}
+
+{/**index.html 
+
+
+              <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+  crossorigin="anonymous"
+/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+ <title>Bizwy Business</title>
+
+
+*/}
     
     </>
   )

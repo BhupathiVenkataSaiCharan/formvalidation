@@ -13,9 +13,9 @@ const Navigation = () => {
     <>
         <Router>
             <Routes>
-                <Route exact="true" path="/charan/" element={<Design1/>}/>
-                <Route path="/charan/profilepage" element={<ProfilePage/>}/>
-                <Route path="/charan/edit" element={<Edit/>}/>
+                <Route exact="true" path="/" element={<Design1/>}/>
+                <Route path="/profilepage" element={<ProfilePage/>}/>
+                <Route path="/edit" element={<Edit/>}/>
                 <Route path="*" element={<Error/>} />
             </Routes>
         </Router>

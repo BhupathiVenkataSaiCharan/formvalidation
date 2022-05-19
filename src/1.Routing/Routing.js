@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from '../2.Toggle/forLogin/Login';
 import Reset from '../2.Toggle/forOtp/Reset';
 import Help from '../2.Toggle/Redirect/Help';

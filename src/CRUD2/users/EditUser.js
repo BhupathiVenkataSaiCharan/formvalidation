@@ -31,7 +31,7 @@ const {name,username,email,phone,website} = user;
 
     const handleSubmit = async e =>{
         e.preventDefault();
-        await axios.post(`https://localhost:3001/users/${id}`,user);
+        await axios.put(`https://localhost:3001/users/${id}`,user);
         navigate("/orders");
     }
 

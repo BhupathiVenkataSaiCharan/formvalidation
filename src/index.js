@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
 import App from './App';
+// import Gist from './Gist';
 
 // import { createStore } from 'redux'
 
@@ -15,7 +16,8 @@ import App from './App';
 
 ReactDOM.render(
   // <Provider store={store}>
-    <App />,
+    <App/>,
+    // <Gist/>,
   // </Provider>,
   document.getElementById('root')
 );

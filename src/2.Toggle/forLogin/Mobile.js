@@ -3,6 +3,9 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LockIcon from '@mui/icons-material/Lock';
 import { NavLink, useNavigate } from 'react-router-dom';
 import "../../index.css";
+import ReactPhoneInput from "react-phone-input-2";
+import Input from "./Input";
+
 
 
 function Mobile () {
@@ -230,6 +233,10 @@ function Mobile () {
                             </div>
                             <div className='help'>
                             <NavLink to="/help">Help</NavLink>    
+                            </div>
+
+                            <div>
+                            <Input/>
                             </div>
 
                         <br/>

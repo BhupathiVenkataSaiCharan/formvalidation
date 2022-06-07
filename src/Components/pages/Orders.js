@@ -15,6 +15,7 @@ import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBullet
 import CardGiftcardOutlinedIcon from '@mui/icons-material/CardGiftcardOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import CustomerPage from '../dashboard/CustomerPage';
+import Home from '../../CRUD2/Home';
 
 const Customers = () => {
   return(
@@ -56,7 +57,8 @@ const Customers = () => {
           </div>
           <div className='row'>
             <div className='col-lg-12'>
-              <h5 style={{marginTop:"50px",marginLeft:"-65px"}}>Orders</h5>
+              {/* <h5 style={{marginTop:"50px",marginLeft:"-65px"}}>Orders</h5> */}
+              <Home/>
             </div>
           </div>
           {/* <div className='row' style={{marginLeft:"-70px"}}>

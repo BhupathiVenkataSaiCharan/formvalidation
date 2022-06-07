@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from '../2.Toggle/forLogin/Login';
 import Reset from '../2.Toggle/forOtp/Reset';
 import Help from '../2.Toggle/Redirect/Help';
@@ -18,6 +18,13 @@ import Settings from "../Components/pages/Settings"
 
 // import Error from "../2.Toggle/Error/Error"
 import Admin from '../Components/pages/Admin';
+
+
+
+
+import EditUser from "../CRUD2/users/EditUser";
+import AddUser from '../CRUD2/users/AddUser';
+import ViewUser from '../CRUD2/users/ViewUser';
 
 
 function Routing(){
@@ -41,6 +48,12 @@ function Routing(){
             <Route path="/settings" element={<Settings/>}/>
             <Route path="*" element={<Navigate replace to="/"/>}/>
             <Route path="/" element={<Navigate replace to="/login"/>}/>
+
+
+            <Route path='/user/:id' element={<ViewUser/>}/>
+        <Route path='/user/edit/:id' element={<EditUser/>}/>
+        <Route path="/user/add" element={<AddUser/>}/>
+
           </Routes>
         </div>
       </Router>

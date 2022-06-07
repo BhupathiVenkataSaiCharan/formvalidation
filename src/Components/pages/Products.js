@@ -16,6 +16,8 @@ import CardGiftcardOutlinedIcon from '@mui/icons-material/CardGiftcardOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import CustomerPage from '../dashboard/CustomerPage';
 
+import Crud from "../../CRUD/Crud";
+
 const Customers = () => {
   return(
     <>
@@ -56,7 +58,8 @@ const Customers = () => {
           </div>
           <div className='row'>
             <div className='col-lg-12'>
-              <h5 style={{marginTop:"50px",marginLeft:"-65px"}}>Products</h5>
+              {/* <h5 style={{marginTop:"50px",marginLeft:"-65px"}}>Products</h5> */}
+              <Crud/>
             </div>
           </div>
           {/* <div className='row' style={{marginLeft:"-70px"}}>

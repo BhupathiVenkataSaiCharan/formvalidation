@@ -24,8 +24,10 @@ const AddUser = () => {
 
     const handleSubmit = async e =>{
         e.preventDefault();
-        await axios.post(`https://localhost:3001/users`,user);
-        navigate("/orders");
+        await axios.post(`https://localhost:3001/users`,user)
+        .then(()=>{
+            navigate("/orders")
+        })
     }
 
 

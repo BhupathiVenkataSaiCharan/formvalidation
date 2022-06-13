@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import "../Dashboard.css"
 import SearchIcon from '@mui/icons-material/Search';
 
+import 'semantic-ui-css/semantic.min.css';
+
 
 import GridViewIcon from '@mui/icons-material/GridView';
 import PersonPinOutlinedIcon from '@mui/icons-material/PersonPinOutlined';
@@ -14,6 +16,9 @@ import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBullet
 import CardGiftcardOutlinedIcon from '@mui/icons-material/CardGiftcardOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import TopNav from '../TopNav/TopNav';
+
+
+import Read from "../../CRUD3/Read";
 
 const Analytics = () => {
   return(
@@ -57,7 +62,8 @@ const Analytics = () => {
           </div>
           <div className='row'>
             <div className='col-lg-12'>
-              <h5 style={{marginTop:"50px",marginLeft:"-65px"}}>Analytics</h5>
+              {/* <h5 style={{marginTop:"50px",marginLeft:"-65px"}}>Analytics</h5> */}
+              <Read/>
             </div>
           </div>
           {/* <div className='row' style={{marginLeft:"-70px"}}>

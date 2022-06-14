@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 // import Gist from './Gist';
 
+// import 'semantic-ui-css/semantic.min.css';
+
+
 // import { createStore } from 'redux'
 
 // import { Provider } from 'react-redux'

@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import "../Dashboard.css"
 import SearchIcon from '@mui/icons-material/Search';
 
-import 'semantic-ui-css/semantic.min.css';
 
 
 import GridViewIcon from '@mui/icons-material/GridView';

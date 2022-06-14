@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Table, Button } from 'semantic-ui-react';
+import { Table, Button, List } from 'semantic-ui-react';
 import { useNavigate, Link } from 'react-router-dom';
 
 function Read() {
@@ -14,11 +14,15 @@ function Read() {
     }, []);
 
     const setData = (data) => {
-        let { id, firstName, lastName, checkbox } = data;
+        let { id, image, companyName, companyNumber, uniqueNumber, lineofBusiness } = data;
         localStorage.setItem('ID', id);
-        localStorage.setItem('First Name', firstName);
-        localStorage.setItem('Last Name', lastName);
-        localStorage.setItem('Checkbox Value', checkbox)
+        // localStorage.setItem('First Name', firstName);
+        // localStorage.setItem('Last Name', lastName);
+        localStorage.setItem('Image', image);
+        localStorage.setItem('Company Name', companyName);
+        localStorage.setItem('Company Number', companyNumber);
+        localStorage.setItem('Unique Number', uniqueNumber);
+        localStorage.setItem('Line of Business', lineofBusiness);
     }
 
     const getData = () => {
@@ -43,16 +47,15 @@ function Read() {
 
     return (
         <div>
-        <Button className='btn btn-primary' onClick={addUser}>Add User</Button>
+        <Button primary onClick={addUser}>Add User</Button>
             <Table singleLine>
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell>ID</Table.HeaderCell>
-                        <Table.HeaderCell>First Name</Table.HeaderCell>
-                        <Table.HeaderCell>Last Name</Table.HeaderCell>
-                        <Table.HeaderCell>Checkbox Value</Table.HeaderCell>
-                        <Table.HeaderCell>Update</Table.HeaderCell>
-                        <Table.HeaderCell>Delete</Table.HeaderCell>
+                        <Table.HeaderCell>List of Companies</Table.HeaderCell>
+                        {/* <Table.HeaderCell>Last Name</Table.HeaderCell> */}
+                        <Table.HeaderCell>CRUD Operations</Table.HeaderCell>
+                        {/* <Table.HeaderCell>Delete</Table.HeaderCell> */}
                     </Table.Row>
                 </Table.Header>
 
@@ -61,22 +64,34 @@ function Read() {
                         return (
                             <Table.Row>
                                 <Table.Cell>{data.id}</Table.Cell>
-                                <Table.Cell>{data.firstName}</Table.Cell>
-                                <Table.Cell>{data.lastName}</Table.Cell>
-                                <Table.Cell>{data.checkbox ? 'Checked' : 'Unchecked'}</Table.Cell>
-                                <Link to='/update3'>
-                                    <Table.Cell> 
-                                        <Button className='btn btn-primary' onClick={() => setData(data)}>Update</Button>
-                                    </Table.Cell>
-                                </Link>
-                                <Link to='/view3'>
-                                    <Table.Cell> 
-                                        <Button className='btn btn-primary' onClick={() => setData(data)}>View</Button>
-                                    </Table.Cell>
-                                </Link>
                                 <Table.Cell>
-                                    <Button className='btn btn-danger' onClick={() => onDelete(data.id)}>Delete</Button>
+                                    <List>
+                                        <List.Item>{data.image}</List.Item>
+                                        <List.Item>{data.companyName}</List.Item>
+                                        <List.Item>{data.companyNumber}</List.Item>
+                                        <List.Item>{data.uniqueNumber}</List.Item>
+                                        <List.Item>{data.lineofBusiness}</List.Item>
+                                    </List>
                                 </Table.Cell>
+                                {/* <Table.Cell>{data.firstName}</Table.Cell>
+                                <Table.Cell>{data.lastName}</Table.Cell> */}
+                                
+                                <Table.Cell> 
+                                    <Link to='/update3'>
+                                        <Button primary onClick={() => setData(data)}>Update</Button>
+                                    </Link>
+                                    <Link to='/view3'>
+                                        <Button color='green' onClick={() => setData(data)}>View</Button>
+                                    </Link>
+                                        <Button color="red" onClick={() => onDelete(data.id)}>Delete</Button>
+                                </Table.Cell>
+                                
+                                {/* <Table.Cell> 
+                                        
+                                </Table.Cell>
+                                <Table.Cell>
+                                    
+                                </Table.Cell> */}
                             </Table.Row>
                         )
                     })}

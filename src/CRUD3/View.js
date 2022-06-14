@@ -1,20 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Checkbox, Form } from 'semantic-ui-react'
-import axios from 'axios';
+import { Button, Form } from 'semantic-ui-react'
+// import axios from 'axios';
 import { useNavigate } from 'react-router';
 
 function View() {
     let navigate = useNavigate();
     const [id, setID] = useState(null);
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [checkbox, setCheckbox] = useState(false);
+    const [image, setImage] = useState('');
+    const [email, setEmail] = useState('');
+    const [companyName, setCompanyName] = useState('');
+    const [companyNumber, setCompanyNumber] = useState('');
+    const [uniqueNumber, setUniqueNumber] = useState('');
+    const [lineofBusiness, setLineofBusiness] = useState('');
 
     useEffect(() => {
         setID(localStorage.getItem('ID'))
-        setFirstName(localStorage.getItem('First Name'));
-        setLastName(localStorage.getItem('Last Name'));
-        setCheckbox(localStorage.getItem('Checkbox Value'));
+        setImage(localStorage.getItem('Image'));
+        setEmail(localStorage.getItem('Email'));
+        setCompanyName(localStorage.getItem('Company Name'));
+        setCompanyNumber(localStorage.getItem('Company Number'));
+        setUniqueNumber(localStorage.getItem('Unique Number'));
+        setLineofBusiness(localStorage.getItem('Line of Business'));
     }, []);
 
     // const updateAPIData = () => {
@@ -31,23 +37,64 @@ function View() {
         navigate("/analytics");
     }
     return (
-        <div>
+        <div className='text-lg-center p-lg-5'>
             <Form className="create-form">
                 <Form.Field>
-                    <label>First Name</label>
-                    <p>{firstName}</p>
-                    {/* <input placeholder='First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)}/> */}
+                    <label>Company Image</label>
+                    <p>{image}</p>
                 </Form.Field>
                 <Form.Field>
-                    <label>Last Name</label>
-                    <p>{lastName}</p>
-                    {/* <input placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)}/> */}
+                    <label>Company Name</label>
+                    <p>{companyName}</p>
                 </Form.Field>
                 <Form.Field>
-                    <Checkbox label='I agree to the Terms and Conditions' checked={checkbox} onChange={() => setCheckbox(!checkbox)}/>
+                    <label>Company Phone Number</label>
+                    <p>{companyNumber}</p>
                 </Form.Field>
-                {/* <Button type='submit' onClick={updateAPIData}>Update</Button> */}
-                <Button type="submit" onClick={backHome} >Go back home</Button>
+                <Form.Field>
+                    <label>Website URL</label>
+                    <p>website</p>
+                </Form.Field>
+                <Form.Field>
+                    <label>E-mail ID</label>
+                    <p>{email}</p>
+                </Form.Field>
+                <Form.Field>
+                    <label>Line of Business</label>
+                    <p>{lineofBusiness}</p>
+                </Form.Field>
+                <Form.Field>
+                    <label>GSTIN</label>
+                    <p>GSTIN</p>
+                </Form.Field>
+                <Form.Field>
+                    <label>PAN</label>
+                    <p>PAN number</p>
+                </Form.Field>
+                <Form.Field>
+                    <label>Company Opening Time</label>
+                    <p>Time</p>
+                </Form.Field>
+                <Form.Field>
+                    <label>Company Closing Time</label>
+                    <p>Time</p>
+                </Form.Field>
+                <Form.Field>
+                    <label>Address</label>
+                    <p>Address</p>
+                </Form.Field>
+                <Form.Field>
+                    <label>List of Branches</label>
+                    <p>branch1</p>
+                    <p>branch2</p>
+                    <p>branch3</p>
+                </Form.Field>
+                <Form.Field>
+                    <label>Company Unique Number</label>
+                    <p>{uniqueNumber}</p>
+                </Form.Field>
+                
+                <Button primary type="submit" onClick={backHome} >Go back home</Button>
             </Form>
         </div>
     )

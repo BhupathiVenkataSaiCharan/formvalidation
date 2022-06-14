@@ -21,10 +21,6 @@ import Admin from '../Components/pages/Admin';
 
 
 
-
-import EditUser from "../CRUD2/users/EditUser";
-import AddUser from '../CRUD2/users/AddUser';
-import ViewUser from '../CRUD2/users/ViewUser';
 import Create from '../CRUD3/Create';
 import Read from '../CRUD3/Read';
 import Update from '../CRUD3/Update';
@@ -51,12 +47,8 @@ function Routing(){
             <Route path="/inventory" element={<Inventory/>}/>
             <Route path="/settings" element={<Settings/>}/>
             <Route path="*" element={<Navigate replace to="/"/>}/>
-            <Route path="/" element={<Navigate replace to="/login"/>}/>
+            <Route path="/" element={<Navigate replace to="/analytics"/>}/>
 
-
-            <Route path='/user/:id' element={<ViewUser/>}/>
-        <Route path='/user/edit/:id' element={<EditUser/>}/>
-        <Route path="/user/add" element={<AddUser/>}/>
 
         <Route path='/create3' element={<Create/>}/>
         <Route path='/read3' element={<Read/>}/>

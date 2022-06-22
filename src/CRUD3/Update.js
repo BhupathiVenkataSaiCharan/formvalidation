@@ -14,7 +14,7 @@ function Update() {
 
     useEffect(() => {
         setID(localStorage.getItem('ID'))
-        setImage(localStorage.getItem('Image'));
+        setImage(localStorage.getItem('image'));
         setCompanyName(localStorage.getItem('Company Name'));
         setCompanyNumber(localStorage.getItem('Company Number'));
         setUniqueNumber(localStorage.getItem('Unique Number'));
@@ -29,15 +29,21 @@ function Update() {
             uniqueNumber,
             lineofBusiness
         }).then(() => {
-            navigate('/overview')
+            navigate('/company/list')
         })
     }
     return (
-        <div>
+        <div className="container-fluid">
+        <div className='row'>
+            <div className='col-lg-4'>
+
+            </div>
+            <div className="col-lg-6">
+
             <Form className="create-form">
                 <Form.Field>
                     <label>Image</label>
-                    <input placeholder='Image' value={image} onChange={(e) => setImage(e.target.value)}/>
+                    <input type="file" placeholder='Image' value={image} onChange={(e) => setImage(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
                     <label>Company Name</label>
@@ -57,6 +63,8 @@ function Update() {
                 </Form.Field>
                 <Button type='submit' onClick={updateAPIData}>Update</Button>
             </Form>
+        </div>
+        </div>
         </div>
     )
 }

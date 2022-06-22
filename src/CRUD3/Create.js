@@ -22,30 +22,43 @@ function Create() {
     // const [checkbox, setCheckbox] = useState(false);
     // console.log(checkbox)
     const postData = () => {
-        axios.post(`https://62a6f21797b6156bff833b05.mockapi.io/CRUD`, {
-            // firstName,
-            // lastName,
-            image,
-            companyName,
-            email,
-            companyNumber,
-            uniqueNumber,
-            lineofBusiness
-            // checkbox
-        }).then(() => {
+
+        const url = `https://62a6f21797b6156bff833b05.mockapi.io/CRUD`
+
+        // const formData = new FormData()
+
+        // formData.append('image',image)
+
+        // console.log("hello charan")
+
+            axios.post(url, {
+                // firstName,
+                // lastName,
+                image,
+                companyName,
+                email,
+                companyNumber,
+                uniqueNumber,
+                lineofBusiness
+                // checkbox
+            })
+
+        .then(() => {
             navigate('/company/list');
         })
     }
     return (
-        <>
+        <div className='container-fluid'>
+        <div className='row'>
         <div className='col-lg-4'>
             <p>data</p>
         </div>
-        <div className='text-black align-content-center col-lg-6 '>
+        <div className='text-black align-content-center col-lg-5 '>
             <Form className="create-form">
                 <Form.Field>
                     <label>Image</label>
-                    <input required placeholder='First Name' onChange={(e) => setImage(e.target.value)}/>
+                    {/* <input required placeholder='First Name' onChange={(e) => setImage(e.target.value)}/> */}
+                    <input type="file" accept='image' onChange={(e) => setImage(e.target.value)} />
                 </Form.Field>
                 <Form.Field>
                     <label>Company Name</label>
@@ -73,7 +86,8 @@ function Create() {
                 <Button onClick={postData} type='submit'>Submit</Button>
             </Form>
         </div>
-        </>
+        </div>
+        </div>
     )
 }
 

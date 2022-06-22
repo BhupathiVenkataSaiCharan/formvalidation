@@ -12,10 +12,12 @@ import SubMenu from './SubMenu';
 
 // background: #15171c;
 const Nav = styled.div`
-  height: 70px;
+  background: #15171c;
+  height: 60px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom:25px;
 `;
 
 const NavIcon = styled(Link)`
@@ -73,7 +75,7 @@ const DropbarNav = styled.nav`
 
 const SideMenu = () => {
 
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(true);
   const [dropbar, setDropbar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -86,7 +88,7 @@ const SideMenu = () => {
         <Nav>
           <NavIcon to='#'>
           {/* onClick={showSidebar} */}
-            <FaIcons.FaBars onClick={showSidebar}/>
+            <FaIcons.FaBars/>
           </NavIcon>
           <NavIcon2 to='#'>
           {/* onClick={showSidebar} */}
@@ -99,7 +101,7 @@ const SideMenu = () => {
           <SidebarWrap>
           <NavIcon to='#'>
           {/* onClick={showSidebar}  */}
-            <AiIcons.AiOutlineClose onClick={showSidebar}/>
+            <AiIcons.AiOutlineClose/>
           </NavIcon>
           {SidemenuData.map((item,index)=>{
             return <SubMenu item={item} key={index} />;

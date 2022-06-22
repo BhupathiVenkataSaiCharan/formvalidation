@@ -15,7 +15,7 @@ function View() {
 
     useEffect(() => {
         setID(localStorage.getItem('ID'))
-        setImage(localStorage.getItem('Image'));
+        setImage(localStorage.getItem('image'));
         setEmail(localStorage.getItem('Email'));
         setCompanyName(localStorage.getItem('Company Name'));
         setCompanyNumber(localStorage.getItem('Company Number'));
@@ -34,7 +34,7 @@ function View() {
     // }
 
     const backHome = () => {
-        navigate("/overview");
+        navigate("/company/list");
     }
     return (
         <div className='text-lg-center p-lg-5 text-black'>

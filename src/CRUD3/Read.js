@@ -11,9 +11,17 @@ import * as BiIcons from "react-icons/bi";
 
 
 function Read() {
+
     const [APIData, setAPIData] = useState([]);
+    
+    const url = `https://62a6f21797b6156bff833b05.mockapi.io/CRUD`
+
+        const formData = new FormData()
+
+        // formData.append('image',image)
+
     useEffect(() => {
-        axios.get(`https://62a6f21797b6156bff833b05.mockapi.io/CRUD`)
+        axios.get(url,formData)
             .then((response) => {
                 console.log(response.data)
                 setAPIData(response.data);
@@ -25,7 +33,7 @@ function Read() {
         localStorage.setItem('ID', id);
         // localStorage.setItem('First Name', firstName);
         // localStorage.setItem('Last Name', lastName);
-        localStorage.setItem('Image', image);
+        localStorage.setItem('image', image);
         localStorage.setItem('Company Name', companyName);
         localStorage.setItem('Company Number', companyNumber);
         localStorage.setItem('Unique Number', uniqueNumber);
@@ -49,11 +57,11 @@ function Read() {
     let navigate = useNavigate();
 
     const addUser = () => {
-        navigate("/create3");
+        navigate("/company/create");
     }
 
     return (
-        <div>
+        <div className='container-fluid'>
         <Button primary onClick={addUser}>Add Company</Button>
             <Table singleLine>
                 <Table.Header>
@@ -74,8 +82,20 @@ function Read() {
                                 {/* <Table.Cell>{data.id}</Table.Cell> */}
                                 <Table.Cell>
                                     <List>
-                                        <List.Item>{data.image}</List.Item>
-                                        <List.Item>{data.companyName}</List.Item>
+                                        <List.Item>
+                                            <div style={{width:"40px",height:"40px"}}>
+                                                {data.image}
+                                            </div>
+                                        </List.Item>
+                                        <List.Item>
+                                            <Link to="/company/view">
+                                            <button 
+                                                style={{background:"transparent",border:"none",color:"blue"}} 
+                                                    onClick={() => setData(data)}>
+                                                {data.companyName}
+                                            </button>
+                                            </Link>
+                                        </List.Item>
                                         <List.Item>{data.companyNumber}</List.Item>
                                         <List.Item>{data.uniqueNumber}</List.Item>
                                         <List.Item>{data.lineofBusiness}</List.Item>
@@ -85,16 +105,16 @@ function Read() {
                                 <Table.Cell>{data.lastName}</Table.Cell> */}
                                 
                                 <Table.Cell> 
-                                    <Link to='/update3'>
+                                    <Link to='/company/edit'>
                                         <Button primary onClick={() => setData(data)}>
                                         <BiIcons.BiEdit color='white' fontSize="1.3rem"/>
                                         </Button>
                                     </Link>
-                                    <Link to='/view3'>
+                                    {/* <Link to='/company/view'>
                                         <Button color='green' onClick={() => setData(data)}>
                                         <AiIcons.AiFillEye color='white' fontSize="1.3rem"/>
                                         </Button>
-                                    </Link>
+                                    </Link> */}
                                         <Button color='red' onClick={() => onDelete(data.id)}>
                                         <MdIcons.MdDelete color='white' fontSize="1.3rem" />
                                         </Button>

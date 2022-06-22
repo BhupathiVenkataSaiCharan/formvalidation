@@ -29,7 +29,7 @@ function Update() {
             uniqueNumber,
             lineofBusiness
         }).then(() => {
-            navigate('/analytics')
+            navigate('/overview')
         })
     }
     return (

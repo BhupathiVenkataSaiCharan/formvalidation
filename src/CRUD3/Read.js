@@ -3,6 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { Table, Button, List } from 'semantic-ui-react';
 import { useNavigate, Link } from 'react-router-dom';
 
+import * as CgIcons from "react-icons/cg"
+import * as MdIcons from "react-icons/md"
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import * as BiIcons from "react-icons/bi";
+
+
 function Read() {
     const [APIData, setAPIData] = useState([]);
     useEffect(() => {
@@ -47,23 +54,24 @@ function Read() {
 
     return (
         <div>
-        <Button primary onClick={addUser}>Add User</Button>
+        <Button primary onClick={addUser}>Add Company</Button>
             <Table singleLine>
                 <Table.Header>
                     <Table.Row>
-                        <Table.HeaderCell>ID</Table.HeaderCell>
+                        {/* <Table.HeaderCell>ID</Table.HeaderCell> */}
                         <Table.HeaderCell>List of Companies</Table.HeaderCell>
                         {/* <Table.HeaderCell>Last Name</Table.HeaderCell> */}
                         <Table.HeaderCell>CRUD Operations</Table.HeaderCell>
                         {/* <Table.HeaderCell>Delete</Table.HeaderCell> */}
                     </Table.Row>
                 </Table.Header>
-
+                
+                {/* <div style={{marginTop:"20px"}}> */}
                 <Table.Body>
                     {APIData.map((data) => {
                         return (
                             <Table.Row>
-                                <Table.Cell>{data.id}</Table.Cell>
+                                {/* <Table.Cell>{data.id}</Table.Cell> */}
                                 <Table.Cell>
                                     <List>
                                         <List.Item>{data.image}</List.Item>
@@ -78,12 +86,18 @@ function Read() {
                                 
                                 <Table.Cell> 
                                     <Link to='/update3'>
-                                        <Button primary onClick={() => setData(data)}>Update</Button>
+                                        <Button primary onClick={() => setData(data)}>
+                                        <BiIcons.BiEdit color='white' fontSize="1.3rem"/>
+                                        </Button>
                                     </Link>
                                     <Link to='/view3'>
-                                        <Button color='green' onClick={() => setData(data)}>View</Button>
+                                        <Button color='green' onClick={() => setData(data)}>
+                                        <AiIcons.AiFillEye color='white' fontSize="1.3rem"/>
+                                        </Button>
                                     </Link>
-                                        <Button color="red" onClick={() => onDelete(data.id)}>Delete</Button>
+                                        <Button color='red' onClick={() => onDelete(data.id)}>
+                                        <MdIcons.MdDelete color='white' fontSize="1.3rem" />
+                                        </Button>
                                 </Table.Cell>
                                 
                                 {/* <Table.Cell> 
@@ -96,6 +110,7 @@ function Read() {
                         )
                     })}
                 </Table.Body>
+                {/* </div> */}
             </Table>
         </div>
     )

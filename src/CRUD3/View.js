@@ -34,54 +34,54 @@ function View() {
     // }
 
     const backHome = () => {
-        navigate("/analytics");
+        navigate("/overview");
     }
     return (
-        <div className='text-lg-center p-lg-5'>
+        <div className='text-lg-center p-lg-5 text-black'>
             <Form className="create-form">
                 <Form.Field>
-                    <label>Company Image</label>
-                    <p>{image}</p>
+                    <label>Company Image:{image}</label>
+                    {/* <p>{image}</p> */}
                 </Form.Field>
                 <Form.Field>
-                    <label>Company Name</label>
-                    <p>{companyName}</p>
+                    <label>Company Name:{companyName}</label>
+                    {/* <p>{companyName}</p> */}
                 </Form.Field>
                 <Form.Field>
-                    <label>Company Phone Number</label>
-                    <p>{companyNumber}</p>
+                    <label>Company Phone Number:{companyNumber}</label>
+                    {/* <p>{companyNumber}</p> */}
                 </Form.Field>
                 <Form.Field>
-                    <label>Website URL</label>
-                    <p>website</p>
+                    <label>Website URL:website</label>
+                    {/* <p>website</p> */}
                 </Form.Field>
                 <Form.Field>
-                    <label>E-mail ID</label>
-                    <p>{email}</p>
+                    <label>E-mail ID:{email}</label>
+                    {/* <p>{email}</p> */}
                 </Form.Field>
                 <Form.Field>
-                    <label>Line of Business</label>
-                    <p>{lineofBusiness}</p>
+                    <label>Line of Business:{lineofBusiness}</label>
+                    {/* <p>{lineofBusiness}</p> */}
                 </Form.Field>
                 <Form.Field>
-                    <label>GSTIN</label>
-                    <p>GSTIN</p>
+                    <label>GSTIN:GSTIN</label>
+                    {/* <p>GSTIN</p> */}
                 </Form.Field>
                 <Form.Field>
-                    <label>PAN</label>
-                    <p>PAN number</p>
+                    <label>PAN: PAN Number</label>
+                    {/* <p>PAN number</p> */}
                 </Form.Field>
                 <Form.Field>
-                    <label>Company Opening Time</label>
-                    <p>Time</p>
+                    <label>Company Opening Time: Time</label>
+                    {/* <p>Time</p> */}
                 </Form.Field>
                 <Form.Field>
-                    <label>Company Closing Time</label>
-                    <p>Time</p>
+                    <label>Company Closing Time: Time</label>
+                    {/* <p>Time</p> */}
                 </Form.Field>
                 <Form.Field>
-                    <label>Address</label>
-                    <p>Address</p>
+                    <label>Address: Address</label>
+                    {/* <p>Address</p> */}
                 </Form.Field>
                 <Form.Field>
                     <label>List of Branches</label>
@@ -90,8 +90,8 @@ function View() {
                     <p>branch3</p>
                 </Form.Field>
                 <Form.Field>
-                    <label>Company Unique Number</label>
-                    <p>{uniqueNumber}</p>
+                    <label>Company Unique Number:{uniqueNumber}</label>
+                    {/* <p>{uniqueNumber}</p> */}
                 </Form.Field>
                 
                 <Button primary type="submit" onClick={backHome} >Go back home</Button>

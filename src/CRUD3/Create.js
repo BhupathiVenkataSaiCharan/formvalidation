@@ -33,11 +33,15 @@ function Create() {
             lineofBusiness
             // checkbox
         }).then(() => {
-            navigate('/analytics');
+            navigate('/company/list');
         })
     }
     return (
-        <div>
+        <>
+        <div className='col-lg-4'>
+            <p>data</p>
+        </div>
+        <div className='text-black align-content-center col-lg-6 '>
             <Form className="create-form">
                 <Form.Field>
                     <label>Image</label>
@@ -69,6 +73,7 @@ function Create() {
                 <Button onClick={postData} type='submit'>Submit</Button>
             </Form>
         </div>
+        </>
     )
 }
 

@@ -14,7 +14,7 @@ function Update() {
 
     useEffect(() => {
         setID(localStorage.getItem('ID'))
-        setImage(localStorage.getItem('image'));
+        setImage(localStorage.getItem('Image'));
         setCompanyName(localStorage.getItem('Company Name'));
         setCompanyNumber(localStorage.getItem('Company Number'));
         setUniqueNumber(localStorage.getItem('Unique Number'));
@@ -43,7 +43,7 @@ function Update() {
             <Form className="create-form">
                 <Form.Field>
                     <label>Image</label>
-                    <input type="file" placeholder='Image' value={image} onChange={(e) => setImage(e.target.value)}/>
+                    <input placeholder='Image' value={image} onChange={(e) => setImage(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
                     <label>Company Name</label>

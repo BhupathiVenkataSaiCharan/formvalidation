@@ -9,19 +9,21 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as BiIcons from "react-icons/bi";
 
+import Modal from "@material-ui/core/Modal";
+// import { Typography } from '@material-ui/core';
 
 function Read() {
 
     const [APIData, setAPIData] = useState([]);
     
-    const url = `https://62a6f21797b6156bff833b05.mockapi.io/CRUD`
+    // const url = `https://62a6f21797b6156bff833b05.mockapi.io/CRUD`
 
-        const formData = new FormData()
+        // const formData = new FormData()
 
         // formData.append('image',image)
 
     useEffect(() => {
-        axios.get(url,formData)
+        axios.get(`https://62a6f21797b6156bff833b05.mockapi.io/CRUD`)
             .then((response) => {
                 console.log(response.data)
                 setAPIData(response.data);
@@ -33,7 +35,7 @@ function Read() {
         localStorage.setItem('ID', id);
         // localStorage.setItem('First Name', firstName);
         // localStorage.setItem('Last Name', lastName);
-        localStorage.setItem('image', image);
+        localStorage.setItem('Image', image);
         localStorage.setItem('Company Name', companyName);
         localStorage.setItem('Company Number', companyNumber);
         localStorage.setItem('Unique Number', uniqueNumber);
@@ -59,6 +61,19 @@ function Read() {
     const addUser = () => {
         navigate("/company/create");
     }
+
+
+    //modal for delete
+
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(true)
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
+
 
     return (
         <div className='container-fluid'>
@@ -118,6 +133,37 @@ function Read() {
                                         <Button color='red' onClick={() => onDelete(data.id)}>
                                         <MdIcons.MdDelete color='white' fontSize="1.3rem" />
                                         </Button>
+
+                                        <Button color="green" onClick={handleOpen}>
+                                        <MdIcons.MdDelete color='white' fontSize="1.3rem" />
+                                        </Button>
+                                        <Modal
+                                            onClose={handleClose}
+                                            open={open}
+                                            style={{
+                                            position: 'absolute',
+                                            border: '2px solid #000',
+                                            backgroundColor: 'gray',
+                                            boxShadow: '2px solid black',
+                                            height:150,
+                                            width: 300,
+                                            margin: 'auto'
+                                            }}
+                                        >
+                                        <>
+                                            <h2 className="text-lg-center">Are You Sure?</h2>
+                                            <div className="row">
+                                                <div className="col-lg-6">Yes</div>
+                                                <div className="col-lg-6">Cancel</div>
+                                            </div>
+                                        </>
+                                            {/* <h2><button>
+                                                Cancel
+                                            </button></h2> */}
+                                            {/* <p>Yes</p> */}
+                                            {/* <p>Cancel</p> */}
+                                        </Modal>
+
                                 </Table.Cell>
                                 
                                 {/* <Table.Cell> 

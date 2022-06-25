@@ -33,7 +33,7 @@ function App() {
     //   </div>
     // </>
     
-    <div className="App" style={{backgroundColor:"#e1e6e2",height:"100vh"}}>
+    <div className="App" style={{backgroundColor:"#e1e6e2",height:"100%"}}>
       <Router>
         <SideMenu/>
         <Routes>

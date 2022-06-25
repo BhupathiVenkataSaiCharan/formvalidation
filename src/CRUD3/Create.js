@@ -15,6 +15,7 @@ function Create() {
     const [openingTime, setOpeningTime] = useState('');
     const [closingTime, setClosingTime] = useState('');
     const [uniqueNumber, setUniqueNumber] = useState('');
+    const [address,setAddress] = useState('');
     
 
     // const [firstName, setFirstName] = useState('');
@@ -39,7 +40,8 @@ function Create() {
                 email,
                 companyNumber,
                 uniqueNumber,
-                lineofBusiness
+                lineofBusiness,
+                address
                 // checkbox
             })
 
@@ -50,9 +52,7 @@ function Create() {
     return (
         <div className='container-fluid'>
         <div className='row'>
-        <div className='col-lg-4'>
-            <p>data</p>
-        </div>
+        <div className='col-lg-4'></div>
         <div className='text-black align-content-center col-lg-5 '>
             <Form className="create-form">
                 <Form.Field>
@@ -62,7 +62,7 @@ function Create() {
                 </Form.Field>
                 <Form.Field>
                     <label>Company Name</label>
-                    <input required placeholder='First Name' onChange={(e) => setCompanyName(e.target.value)}/>
+                    <input required placeholder='Company Name' onChange={(e) => setCompanyName(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
                     <label>Email Address</label>
@@ -70,20 +70,25 @@ function Create() {
                 </Form.Field>
                 <Form.Field>
                     <label>Company Mobile Number</label>
-                    <input required placeholder='First Name' onChange={(e) => setCompanyNumber(e.target.value)}/>
+                    <input required placeholder='Company Number' onChange={(e) => setCompanyNumber(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
                     <label>Unique Company Number</label>
-                    <input required placeholder='First Name' onChange={(e) => setUniqueNumber(e.target.value)}/>
+                    <input required placeholder='Unique Number' onChange={(e) => setUniqueNumber(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
                     <label>Line of business of the company</label>
-                    <input required placeholder='Last Name' onChange={(e) => setLineofBusiness(e.target.value)}/>
+                    <input required placeholder='Line of Business' onChange={(e) => setLineofBusiness(e.target.value)}/>
+                </Form.Field>
+                <Form.Field>
+                    <label>Line of business of the company</label>
+                    <input required placeholder='Address' onChange={(e) => setAddress(e.target.value)}/>
                 </Form.Field>
                 {/* <Form.Field>
                     <Checkbox label='I agree to the Terms and Conditions' onChange={(e) => setCheckbox(!checkbox)}/>
                 </Form.Field> */}
-                <Button onClick={postData} type='submit'>Submit</Button>
+                <Button color="blue" onClick={postData} type='submit'>Submit</Button>
+                 <Button color="red" onClick={postData} type='submit'>Cancel</Button>
             </Form>
         </div>
         </div>

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Table, Button, List } from 'semantic-ui-react';
+import { Table, Button, List, Popup, Grid } from 'semantic-ui-react';
 import { useNavigate, Link } from 'react-router-dom';
 
 import * as CgIcons from "react-icons/cg"
@@ -51,6 +51,10 @@ function Read() {
 
     const onDelete = (id) => {
         axios.delete(`https://62a6f21797b6156bff833b05.mockapi.io/CRUD/${id}`)
+        
+        // .then(()=>{
+        //     navigate("/company/list");
+        // })
         .then(() => {
             getData();
         })
@@ -67,12 +71,13 @@ function Read() {
 
     const [open, setOpen] = useState(false);
 
-    const handleOpen = () => {
-        setOpen(true)
-    };
-    const handleClose = () => {
-        setOpen(false);
-    };
+    const modalOpen = () => setOpen(!open);
+    // const handleOpen = () => {
+    //     setOpen(true)
+    // };
+    // const handleClose = () => {
+    //     setOpen(false);
+    // };
 
 
     return (
@@ -130,15 +135,45 @@ function Read() {
                                         <AiIcons.AiFillEye color='white' fontSize="1.3rem"/>
                                         </Button>
                                     </Link> */}
+                                    <Popup
+                                                    content='I will not flip!'
+                                                    on='click'
+                                                    pinned
+                                                    position="bottom right"
+                                                    trigger={<Button content='Button' />}
+                                                >
+                                                    <Grid>
+      <Grid.Row>
+        {/* <Popup
+          trigger={<Button color='blue' content='Edit' fluid />}
+          content=''
+          position='top center'
+          size='tiny'
+          inverted
+        /> */}
+        <Button color="blue">Edit</Button>
+      </Grid.Row>
+      <Grid.Row>
+        {/* <Popup
+          trigger={<Button color='red' content='Delete' fluid />}
+          content=''
+          position='top center'
+          size='tiny'
+          inverted
+        /> */}
+        <Button color="red">Delete</Button>
+      </Grid.Row>
+    </Grid>
+                                                </Popup>
                                         <Button color='red' onClick={() => onDelete(data.id)}>
                                         <MdIcons.MdDelete color='white' fontSize="1.3rem" />
                                         </Button>
 
-                                        <Button color="green" onClick={handleOpen}>
+                                        <Button color="green" onClick={modalOpen}>
                                         <MdIcons.MdDelete color='white' fontSize="1.3rem" />
                                         </Button>
                                         <Modal
-                                            onClose={handleClose}
+                                            onClose={()=>setOpen(!open)}
                                             open={open}
                                             style={{
                                             position: 'absolute',
@@ -153,8 +188,20 @@ function Read() {
                                         <>
                                             <h2 className="text-lg-center">Are You Sure?</h2>
                                             <div className="row">
-                                                <div className="col-lg-6">Yes</div>
-                                                <div className="col-lg-6">Cancel</div>
+                                                <div className="col-lg-6">
+                                                    <Button color='red' onClick={() => onDelete(data.id)}>
+                                                        Yes
+                                                    </Button>
+                                                </div>
+                                                <div className="col-lg-6">
+                                                <Link to='/company/list'>
+                                                {/* onClick={() => setData(data)} */}
+                                                    <Button primary onClick={() => modalOpen(!open)}>
+                                                        Cancel
+                                                    </Button>
+                                                </Link>
+                                                
+                                                </div>
                                             </div>
                                         </>
                                             {/* <h2><button>

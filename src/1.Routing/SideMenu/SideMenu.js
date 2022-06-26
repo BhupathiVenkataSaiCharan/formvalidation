@@ -83,7 +83,7 @@ const SideMenu = () => {
 
   return (
     <>
-    <div>
+    <div style={{backgroundColor:"#15171c",height:"100%"}}>
       <div>
         <Nav>
           <NavIcon to='#'>
